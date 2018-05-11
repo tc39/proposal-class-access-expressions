@@ -1,0 +1,20 @@
+{
+  "generator-ecmascript-proposal": {
+    "promptValues": {
+      "hasChampion": true,
+      "championName": "Ron Buckton",
+      "championGithub": "rbuckton",
+      "spec": "https://rbuckton.github.io/proposal-class-access-expressions",
+      "stage": "0",
+      "sections": [
+        "syntax",
+        "semantics",
+        "examples",
+        "grammar",
+        "references"
+      ],
+      "build": "gulp",
+      "vscode": true
+    }
+  }
+}
