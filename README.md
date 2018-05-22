@@ -14,6 +14,8 @@ class C {
 }
 ```
 
+* [Stage 0 Presentation](https://docs.google.com/presentation/d/1VXqGgxq_a0byLuc9yl4jSLR6GlopjvhU_Z0OpZnk6l0/edit?usp=sharing)
+
 <!--#endregion:intro-->
 
 <!--#region:status-->
