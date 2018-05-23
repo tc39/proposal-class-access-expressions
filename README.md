@@ -83,6 +83,9 @@ const x = class {
 }
 ```
 
+It’s not guaranteed to be the correct `x` in the above examples, because you could be
+accessing an overridden member of a subclass.
+
 Also, with current proposal for private static fields and methods, its very easy to
 run into errors at runtime when using `this` in a static method:
 
