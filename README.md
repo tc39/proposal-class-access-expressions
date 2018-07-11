@@ -21,7 +21,7 @@ class C {
 <!--#region:status-->
 ## Status
 
-**Stage:** 0  
+**Stage:** 1  
 **Champion:** Ron Buckton (@rbuckton)  
 
 _For detailed status of this proposal see [TODO](#todo), below._  
