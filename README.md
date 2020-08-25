@@ -156,6 +156,10 @@ class C {
 - When evaluating ``ClassProperty: `class` `[` Expression `]` `` we return a new Reference with the following properties:
   - The referenced name component is the result of calling ?ToPropertyKey on the result of calling GetValue on the result of evaluating _Expression_. 
   - The base value component is the \[\[ClassObject]] of GetThisEnvironment().
+- When evaluating ``ClassProperty: `class` `.` PrivateIdentifier`` we perform the following steps:
+  1. Let `fieldNameString` be the StringValue of _PrivateIdentifier_. 
+  2. Let `bv` be the \[\[ClassObject]] of GetThisEnvironment().
+  3. Return ?[MakePrivateReference](https://tc39.es/proposal-class-fields/#sec-makeprivatereference)( `bv`, `fieldNameString` )
 
 <!--#endregion:semantics-->
 
