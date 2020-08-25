@@ -2,7 +2,7 @@
 # ECMAScript class property access expressions
 
 Class access expressions seek to simplify access to static members of a class as well as provide
-access to static members of a class that cannot be named:
+access to static members of a class when that class is unnamed:
 
 ```js
 class C {
@@ -150,22 +150,12 @@ class C {
 - During ClassDefinitionEvaluation, the class constructor (<var>F</var>) is set as the \[\[ClassObject]] on the method.
 - During NewFunctionEnvironment, the \[\[ClassObject]] is copied from the method (<var>F</var>) to <var>envRec</var>.\[\[ClassObject]].
 - Arrow functions use the \[\[ClassObject]] of their containing lexical environment (similar to `super` and `this`).
-- A new Class Reference type is added with properties similar to Super Reference.
-- When evaluating ``ClassProperty: `class` `.` IdentifierName`` we return a new Class Reference with the following properties:
+- When evaluating ``ClassProperty: `class` `.` IdentifierName`` we return a new Reference with the following properties:
   - The referenced name component is the StringValue of _IdentifierName_. 
   - The base value component is the \[\[ClassObject]] of GetThisEnvironment().
-  - The actualThis component is either:
-    - If the containing method is static, the current `this` binding.
-    - Else, the \[\[ClassObject]] of GetThisEnvironment().
-- When evaluating ``ClassProperty: `class` `[` Expression `]` `` we return a new Class Reference with the following properties:
+- When evaluating ``ClassProperty: `class` `[` Expression `]` `` we return a new Reference with the following properties:
   - The referenced name component is the result of calling ?ToPropertyKey on the result of calling GetValue on the result of evaluating _Expression_. 
   - The base value component is the \[\[ClassObject]] of GetThisEnvironment().
-  - The actualThis component is either:
-    - If the containing method is static, the current `this` binding.
-    - Else, the \[\[ClassObject]] of GetThisEnvironment().
-- GetThisValue(<var>V</var>) would be modified to add an optional <var>calling</var> argument that is set to **true** during EvaluateCall.
-- GetThisValue(<var>V</var>, **true**) returns the thisValue component of a Class Reference in the same way that it does for a Super Reference.
-- GetThisValue(<var>V</var>, **false**) returns the base value component of a Class Reference.
 
 <!--#endregion:semantics-->
 
@@ -253,7 +243,7 @@ This behavior provides the following benefits:
 
 ### Method Invocation
 
-Invoking `class.x()` in a static method uses the current `this` as the receiver (similar to the behavior of `super.x()`):
+Invoking `class.x()` in a method, an initializer, or in the constructor uses the value of containing lexical class as the receiver:
 
 ```js
 class Base {
@@ -263,6 +253,9 @@ class Base {
     static g() {
         class.f();
     }
+    h() {
+        class.f();
+    }
 }
 class Sub extends Base {
 }
@@ -270,40 +263,14 @@ class Sub extends Base {
 Base.g();                           // this: Base, class: Base
 Sub.g();                            // this: Sub, class: Base
 Base.g.call({ name: "Other" });     // this: Other, class: Base
-```
 
-This behavior provides the following benefits:
-
-- Method invocation preserves the `this` receiver to allow for overriding static methods in a subclass.
-- Invocation behavior is similar to `super.x()`, so should be less surprising to users.
-
-Invoking `class.x()` in a non-static method or the constructor uses the value of containing lexical class as the receiver:
-
-```js
-class Base {
-    static f() {
-        console.log(`this.name: ${this.name}, class.name: ${class.name})`);
-    }
-    g() {
-        class.f();
-    }
-}
-class Sub extends Base {
-}
-
-let b = new Base(); 
+let b = new Base();
 let s = new Sub();
-
-b.g();                                      // this: Base, class: Base
-s.g();                                      // this: Base, class: Base
-Base.prototype.g.call({ name: "Other" });   // this: Base, class: Base
+b.h();                              // this: Base, class: Base
+s.h();                              // this: Sub, class: Base
+b.h.call({ name: "Other" });        // this: Other, class: Base
 ```
 
-This behavior provides the following benefits:
-
-- Since instances will not have the lexical class constructor in their prototype hierarchy (other than through narrow corner cases), 
-  users would not expect the lexical `this` to be passed as the receiver from non-static methods. This behavior is the most
-  intuitive and least-surprising behavior for users.
 <!--#endregion:examples-->
 
 <!--#region:api-->
@@ -324,6 +291,7 @@ MemberExpression[Yield, Await] :
 ClassProperty[Yield, Await] :
   `class` `[` Expression[+In, ?Yield, ?Await] `]`
   `class` `.` IdentifierName
+  `class` `.` PrivateIdentifier
 ```
 <!--#endregion:grammar-->
 
@@ -336,7 +304,7 @@ This proposal can easily align with the current class fields proposal, providing
 ```js
 class Base {
     static counter = 0;
-    id = class.counter++;       // Assignment, so `Base` is used as `this`
+    id = class.counter++;       // `Base` is used as `this`
 }
 
 class Sub extends Base {
@@ -348,35 +316,6 @@ console.log(Base.counter);      // 2
 console.log(Sub.counter);       // 2
 ```
 
-## Class Private Methods
-
-This proposal can also align with the current proposals for class private methods, providing access without introducing 
-TypeErrors due to incorrect `this` while preserving the ability for subclasses to override behavior:
-
-```js
-class Base {
-    static a() {
-        console.log("Base.a()");
-        class.#b();
-    }
-    static #b() {
-        console.log("Base.#b()");
-        this.c();
-    }
-    static c() {
-        console.log("Base.c()");
-    }
-}
-
-class Sub extends Base {
-    static c() {
-        console.log("Sub.c()");
-    }
-}
-
-Base.a();   // Base.a()\nBase.#b()\nBase.c()
-Sub.a();    // Base.a()\nBase.#b()\nSub.c()
-```
 
 ## Class Private Fields
 
@@ -398,6 +337,65 @@ console.log(Base.increment());  // 0
 console.log(Sub.increment());   // 1
 console.log(Base.increment());  // 2
 ```
+
+## Class Private Methods
+
+One of the benefits of `class` access expressions is that they guarantee the correct reference is used when accessing static private members. Special care must be taken, however, when invoking private and non-private static methods using `class` access expressions, as the `this` binding within the invoked method will be the lexical class declaration:
+
+```js
+class Base {
+  static #counter = 0;
+  static #increment() {
+    class.#counter++;
+    this.printCounter();
+  }
+  static doIncrement() {
+    class.#increment();
+  }
+  static printCounter() {
+    console.log(class.#counter);
+  }
+}
+class Sub extends Base {
+  static printCounter() {
+    console.log("Custom Counter");
+    super.printCounter();
+  }
+}
+
+Base.doIncrement(); // prints: 1
+Sub.doIncrement(); // prints: 2
+```
+
+In the example above, `Sub`'s overriden `printCounter` is never invoked. Such method calls would need to be rewritten:
+
+```js
+// option 1:
+class Base {
+  ...
+  static #increment() {
+    ...
+  }
+  static doIncrement() {
+    class.#increment.call(this);
+  }
+}
+
+// option 2:
+class Base {
+  ...
+  static #increment(C) {
+    ...
+    C.printCounter();
+  }
+  ...
+  static doIncrement() {
+    class.#increment(this);
+  }
+}
+```
+
+This is due to the fact that `class.` in this example is essentially a substitute for `Base.`, therefore `Base` becomes the receiver in these method calls.
 
 
 <!--#region:references-->
