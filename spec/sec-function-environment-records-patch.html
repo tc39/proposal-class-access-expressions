@@ -62,13 +62,13 @@
       </tr>
       <tr>
         <td>
-          <ins>[[ClassObject]]</ins>
+          <ins>[[InitialClassObject]]</ins>
         </td>
         <td>
           <ins>Object | *undefined*</ins>
         </td>
         <td>
-          <ins>If the associated function has class property access and is not an |ArrowFunction|, [[ClassObject]] is the class that the function was initially bound to as a method. The default value for [[ClassObject]] is *undefined*.</ins>
+          <ins>If the associated function has class property access and is not an |ArrowFunction|, [[InitialClassObject]] is the class that the function was initially bound to as a method. The default value for [[InitialClassObject]] is *undefined*.</ins>
         </td>
       </tr>
       <tr>
@@ -126,7 +126,7 @@
           <ins>GetClassBinding()</ins>
         </td>
         <td>
-          <ins>Return the object that is the base for `class` property accesses bound in this Environment Record. The object is derived from this Environment Record's [[ClassObject]] field. The value *undefined* indicates that `class` property accesses will produce runtime errors.</ins>
+          <ins>Return the object that is the base for `class` property accesses bound in this Environment Record. The object is derived from this Environment Record's [[InitialClassObject]] field. The value *undefined* indicates that `class` property accesses will produce runtime errors.</ins>
         </td>
       </tr>
       </tbody>
@@ -139,7 +139,7 @@
     <emu-alg>
       1. Let _envRec_ be the function Environment Record for which the method was invoked.
       1. If _envRec_.[[ThisBindingStatus]] is ~lexical~, return *false*.
-      1. If _envRec_.[[ClassObject]] has the value *undefined*, return *false*; otherwise, return *true*.
+      1. If _envRec_.[[InitialClassObject]] has the value *undefined*, return *false*; otherwise, return *true*.
     </emu-alg>
   </emu-clause>
 
@@ -147,7 +147,7 @@
     <h1><ins>GetClassBinding ( )</ins></h1>
     <emu-alg>
       1. Let _envRec_ be the function Environment Record for which the method was invoked.
-      1. Let _classObject_ be _envRec_.[[ClassObject]].
+      1. Let _classObject_ be _envRec_.[[InitialClassObject]].
       1. If _classObject_ has the value *undefined*, return *undefined*.
       1. Assert: Type(_classObject_) is Object.
       1. Return ? _classObject_.

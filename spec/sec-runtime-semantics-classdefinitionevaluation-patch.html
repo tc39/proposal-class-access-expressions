@@ -41,7 +41,7 @@
     1. Perform SetFunctionName(_F_, _className_).
     1. Perform MakeConstructor(_F_, *false*, _proto_).
     1. If |ClassHeritage_opt| is present, set _F_.[[ConstructorKind]] to ~derived~.
-    1. <ins>Set _F_.[[ClassObject]] to _F_.</ins>
+    1. <ins>Set _F_.[[InitialClassObject]] to _F_.</ins>
     1. Perform MakeClassConstructor(_F_).
     1. Perform CreateMethodProperty(_proto_, *"constructor"*, _F_).
     1. If |ClassBody_opt| is not present, let _methods_ be a new empty List.

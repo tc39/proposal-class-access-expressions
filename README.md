@@ -138,7 +138,7 @@ class C {
 - Function Environment Records have a new field in Table 15:
   > | Field Name | Value | Meaning |
   > |:-|:-|:-|
-  > | \[\[ClassObject]] | Object \| **undefined** | If the associated function has `class` property access and is not an _ArrowFunction_, \[\[ClassObject]] is the class that the function is bound to as a method. The default value for \[\[ClassObject]] is **undefined**. |
+  > | \[\[InitialClassObject]] | Object \| **undefined** | If the associated function has `class` property access and is not an _ArrowFunction_, \[\[InitialClassObject]] is the class that the function is bound to as a method. The default value for \[\[InitialClassObject]] is **undefined**. |
 - Function Environment Records have a new method in Table 16:
   > | Method | Purpose |
   > |:-|:-|
@@ -146,19 +146,19 @@ class C {
 - ECMAScript Function Objects have a new internal slot in Table 27:
   > | Interanl Slot | Type | Description |
   > |:-|:-|:-|
-  > | \[\[ClassObject]] | Object \| **undefined** | If the function has `class` property access, this is the object where `class` property lookups begin. |
-- During ClassDefinitionEvaluation, the class constructor (<var>F</var>) is set as the \[\[ClassObject]] on the method.
-- During NewFunctionEnvironment, the \[\[ClassObject]] is copied from the method (<var>F</var>) to <var>envRec</var>.\[\[ClassObject]].
-- Arrow functions use the \[\[ClassObject]] of their containing lexical environment (similar to `super` and `this`).
+  > | \[\[InitialClassObject]] | Object \| **undefined** | If the function has `class` property access, this is the object where `class` property lookups begin. |
+- During ClassDefinitionEvaluation, the class constructor (<var>F</var>) is set as the \[\[InitialClassObject]] on the method.
+- During NewFunctionEnvironment, the \[\[InitialClassObject]] is copied from the method (<var>F</var>) to <var>envRec</var>.\[\[InitialClassObject]].
+- Arrow functions use the \[\[InitialClassObject]] of their containing lexical environment (similar to `super` and `this`).
 - When evaluating ``ClassProperty: `class` `.` IdentifierName`` we return a new Reference with the following properties:
   - The referenced name component is the StringValue of _IdentifierName_. 
-  - The base value component is the \[\[ClassObject]] of GetThisEnvironment().
+  - The base value component is the \[\[InitialClassObject]] of GetThisEnvironment().
 - When evaluating ``ClassProperty: `class` `[` Expression `]` `` we return a new Reference with the following properties:
   - The referenced name component is the result of calling ?ToPropertyKey on the result of calling GetValue on the result of evaluating _Expression_. 
-  - The base value component is the \[\[ClassObject]] of GetThisEnvironment().
+  - The base value component is the \[\[InitialClassObject]] of GetThisEnvironment().
 - When evaluating ``ClassProperty: `class` `.` PrivateIdentifier`` we perform the following steps:
   1. Let `fieldNameString` be the StringValue of _PrivateIdentifier_. 
-  2. Let `bv` be the \[\[ClassObject]] of GetThisEnvironment().
+  2. Let `bv` be the \[\[InitialClassObject]] of GetThisEnvironment().
   3. Return ?[MakePrivateReference](https://tc39.es/proposal-class-fields/#sec-makeprivatereference)( `bv`, `fieldNameString` )
 
 <!--#endregion:semantics-->
