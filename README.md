@@ -142,7 +142,7 @@ class C {
 - Function Environment Records have a new method in Table 16:
   > | Method | Purpose |
   > |:-|:-|
-  > | GetClassBase() | Return the object that is the base for `class` property access bound in this Environment Record. |
+  > | GetClassBinding() | Return the object that is the base for `class` property access bound in this Environment Record. |
 - ECMAScript Function Objects have a new internal slot in Table 27:
   > | Interanl Slot | Type | Description |
   > |:-|:-|:-|
