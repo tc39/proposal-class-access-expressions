@@ -1,0 +1,156 @@
+<emu-clause id="sec-function-environment-records" oldids="function-environment">
+  <h1>Function Environment Records</h1>
+  <p>A <dfn>function Environment Record</dfn> is a declarative Environment Record that is used to represent the top-level scope of a function and, if the function is not an |ArrowFunction|, provides a `this` binding. If a function is not an |ArrowFunction| function and references `super`, its function Environment Record also contains the state that is used to perform `super` method invocations from within the function.</p>
+  <p>Function Environment Records have the additional state fields listed in <emu-xref href="#table-additional-fields-of-function-environment-records"></emu-xref>.</p>
+  <emu-table id="table-additional-fields-of-function-environment-records" caption="Additional Fields of Function Environment Records" oldids="table-16">
+    <table>
+      <tbody>
+      <tr>
+        <th>
+          Field Name
+        </th>
+        <th>
+          Value
+        </th>
+        <th>
+          Meaning
+        </th>
+      </tr>
+      <tr>
+        <td>
+          [[ThisValue]]
+        </td>
+        <td>
+          Any
+        </td>
+        <td>
+          This is the *this* value used for this invocation of the function.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[ThisBindingStatus]]
+        </td>
+        <td>
+          ~lexical~ | ~initialized~ | ~uninitialized~
+        </td>
+        <td>
+          If the value is ~lexical~, this is an |ArrowFunction| and does not have a local *this* value.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[FunctionObject]]
+        </td>
+        <td>
+          Object
+        </td>
+        <td>
+          The function object whose invocation caused this Environment Record to be created.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[HomeObject]]
+        </td>
+        <td>
+          Object | *undefined*
+        </td>
+        <td>
+          If the associated function has `super` property accesses and is not an |ArrowFunction|, [[HomeObject]] is the object that the function is bound to as a method. The default value for [[HomeObject]] is *undefined*.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ins>[[ClassObject]]</ins>
+        </td>
+        <td>
+          <ins>Object | *undefined*</ins>
+        </td>
+        <td>
+          <ins>If the associated function has class property access and is not an |ArrowFunction|, [[ClassObject]] is the class that the function is bound to as a method. The default value for [[ClassObject]] is *undefined*.</ins>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[NewTarget]]
+        </td>
+        <td>
+          Object | *undefined*
+        </td>
+        <td>
+          If this Environment Record was created by the [[Construct]] internal method, [[NewTarget]] is the value of the [[Construct]] _newTarget_ parameter. Otherwise, its value is *undefined*.
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </emu-table>
+  <p>Function Environment Records support all of the declarative Environment Record methods listed in <emu-xref href="#table-abstract-methods-of-environment-records"></emu-xref> and share the same specifications for all of those methods except for HasThisBinding<del> and HasSuperBinding</del><ins>, HasSuperBinding, and HasClassBinding</ins>. In addition, function Environment Records support the methods listed in <emu-xref href="#table-additional-methods-of-function-environment-records"></emu-xref>:</p>
+  <emu-table id="table-additional-methods-of-function-environment-records" caption="Additional Methods of Function Environment Records" oldids="table-17">
+    <table>
+      <tbody>
+      <tr>
+        <th>
+          Method
+        </th>
+        <th>
+          Purpose
+        </th>
+      </tr>
+      <tr>
+        <td>
+          BindThisValue(V)
+        </td>
+        <td>
+          Set the [[ThisValue]] and record that it has been initialized.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          GetThisBinding()
+        </td>
+        <td>
+          Return the value of this Environment Record's `this` binding. Throws a *ReferenceError* if the `this` binding has not been initialized.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          GetSuperBase()
+        </td>
+        <td>
+          Return the object that is the base for `super` property accesses bound in this Environment Record. The object is derived from this Environment Record's [[HomeObject]] field. The value *undefined* indicates that `super` property accesses will produce runtime errors.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ins>GetClassBinding()</ins>
+        </td>
+        <td>
+          <ins>Return the object that is the base for `class` property accesses bound in this Environment Record. The object is derived from this Environment Record's [[ClassObject]] field. The value *undefined* indicates that `class` property accesses will produce runtime errors.</ins>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </emu-table>
+  <p>The behaviour of the additional concrete specification methods for function Environment Records is defined by the following algorithms:</p>
+
+  <emu-clause id="sec-function-environment-records-hasclassbinding">
+    <h1><ins>HasClassBinding ( )</ins></h1>
+    <emu-alg>
+      1. Let _envRec_ be the function Environment Record for which the method was invoked.
+      1. If _envRec_.[[ThisBindingStatus]] is ~lexical~, return *false*.
+      1. If _envRec_.[[ClassObject]] has the value *undefined*, return *false*; otherwise, return *true*.
+    </emu-alg>
+  </emu-clause>
+
+  <emu-clause id="sec-getclassbinding">
+    <h1><ins>GetClassBinding ( )</ins></h1>
+    <emu-alg>
+      1. Let _envRec_ be the function Environment Record for which the method was invoked.
+      1. Let _classObject_ be _envRec_.[[ClassObject]].
+      1. If _classObject_ has the value *undefined*, return *undefined*.
+      1. Assert: Type(_classObject_) is Object.
+      1. Return ? _classObject_.
+    </emu-alg>
+  </emu-clause>
+</emu-clause>

@@ -4,13 +4,65 @@
 <link rel="spec" href="es2015" />
 <pre class="metadata">
 title: ECMAScript &#39;class&#39;-property access expressions
-stage: 0
+stage: 1
 contributors: Ron Buckton, Ecma International
 </pre>
 
 <emu-intro id="sec-intro">
-    <h1>Introduction</h1>
-    <p>Forthcoming</p>
-    <p>See <a href="https://github.com/rbuckton/proposal-class-access-expressions#readme">the proposal repository</a> for background material and discussion.</p>
+  <h1>Introduction</h1>
+  <emu-import href="sec-introduction.html"></emu-import>
 </emu-intro>
 
+<emu-clause id="sec-executable-code-and-execution-contexts">
+  <h1>Executable Code and Execution Contexts</h1>
+  <emu-clause id="sec-environment-records">
+    <h1>Environment Records</h1>
+    <emu-import href="sec-the-environment-record-type-hierarchy-patch.html"></emu-import>
+  </emu-clause>
+</emu-clause>
+
+<emu-clause id="sec-ordinary-and-exotic-objects-behaviours">
+  <h1>Ordinary and Exotic Object Behaviors</h1>
+  <emu-import href="sec-ecmascript-function-objects-patch.html"></emu-import>
+</emu-clause>
+
+<emu-clause id="sec-ecmascript-language-expressions">
+  <h1>ECMAScript Language: Expressions</h1>
+  <emu-clause id="sec-primary-expression">
+    <h1>Primary Expression</h1>
+    <emu-clause id="sec-object-initializer">
+      <h1>Object Initializer</h1>
+      <emu-import href="sec-object-initializer-runtime-semantics-propertydefinitionevaluation-patch.html"></emu-import>
+    </emu-clause>
+  </emu-clause>
+  <emu-import href="sec-left-hand-side-expressions-patch.html"></emu-import>
+</emu-clause>
+
+<emu-clause id="sec-ecmascript-language-functions-and-classes">
+  <h1>ECMAScript Language: Functions and Classes</h1>
+  <emu-clause id="sec-method-definitions">
+    <h1>Method Definitions</h1>
+    <emu-import href="sec-runtime-semantics-definemethod-patch.html"></emu-import>
+    <emu-import href="sec-method-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-generator-function-definitions">
+    <h1>Generator Function Definitions</h1>
+    <emu-import href="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-generator-function-definitions">
+    <h1>Generator Function Definitions</h1>
+    <emu-import href="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-asyncgenerator-function-definitions">
+    <h1>Async Generator Function Definitions</h1>
+    <emu-import href="sec-asyncgenerator-definitions-propertydefinitionevaluation-patch.html"></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-class-definitions">
+    <h1>Class Definitions</h1>
+    <emu-import href="sec-runtime-semantics-classdefinitionevaluation-patch.html"></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-async-function-definitions">
+    <h1>Async Function Definitions</h1>
+    <emu-import href="sec-async-function-definitions-PropertyDefinitionEvaluation-patch.html"></emu-import>
+  </emu-clause>
+</emu-clause>

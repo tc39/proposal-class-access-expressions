@@ -1,0 +1,12 @@
+<emu-clause id="sec-makemethod" aoid="MakeMethod">
+  <h1>MakeMethod ( _F_, _homeObject_<ins>, _classObject_</ins> )</h1>
+  <p>The abstract operation MakeMethod takes arguments _F_<del> and _homeObject_</del><ins>, _homeObject_, and _classObject_</ins>. It configures _F_ as a method. It performs the following steps when called:</p>
+  <emu-alg>
+    1. Assert: _F_ is an ECMAScript function object.
+    1. Assert: Type(_homeObject_) is Object.
+    1. Assert: Type(_classObject_) is either Object or Undefined.
+    1. Set _F_.[[HomeObject]] to _homeObject_.
+    1. <ins>Set _F_.[[ClassObject]] to _classObject_.</ins>
+    1. Return NormalCompletion(*undefined*).
+  </emu-alg>
+</emu-clause>

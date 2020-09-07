@@ -1,0 +1,109 @@
+<emu-clause id="sec-the-environment-record-type-hierarchy">
+  <h1>The Environment Record Type Hierarchy</h1>
+
+  <p>The Environment Record abstract class includes the abstract specification methods defined in <emu-xref href="#table-abstract-methods-of-environment-records"></emu-xref>. These abstract methods have distinct concrete algorithms for each of the concrete subclasses.</p>
+  <emu-table id="table-abstract-methods-of-environment-records" caption="Abstract Methods of Environment Records" oldids="table-15">
+    <table>
+      <tbody>
+      <tr>
+        <th>
+          Method
+        </th>
+        <th>
+          Purpose
+        </th>
+      </tr>
+      <tr>
+        <td>
+          HasBinding(N)
+        </td>
+        <td>
+          Determine if an Environment Record has a binding for the String value _N_. Return *true* if it does and *false* if it does not.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CreateMutableBinding(N, D)
+        </td>
+        <td>
+          Create a new but uninitialized mutable binding in an Environment Record. The String value _N_ is the text of the bound name. If the Boolean argument _D_ is *true* the binding may be subsequently deleted.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CreateImmutableBinding(N, S)
+        </td>
+        <td>
+          Create a new but uninitialized immutable binding in an Environment Record. The String value _N_ is the text of the bound name. If _S_ is *true* then attempts to set it after it has been initialized will always throw an exception, regardless of the strict mode setting of operations that reference that binding.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          InitializeBinding(N, V)
+        </td>
+        <td>
+          Set the value of an already existing but uninitialized binding in an Environment Record. The String value _N_ is the text of the bound name. _V_ is the value for the binding and is a value of any ECMAScript language type.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SetMutableBinding(N, V, S)
+        </td>
+        <td>
+          Set the value of an already existing mutable binding in an Environment Record. The String value _N_ is the text of the bound name. _V_ is the value for the binding and may be a value of any ECMAScript language type. _S_ is a Boolean flag. If _S_ is *true* and the binding cannot be set throw a *TypeError* exception.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          GetBindingValue(N, S)
+        </td>
+        <td>
+          Returns the value of an already existing binding from an Environment Record. The String value _N_ is the text of the bound name. _S_ is used to identify references originating in strict mode code or that otherwise require strict mode reference semantics. If _S_ is *true* and the binding does not exist throw a *ReferenceError* exception. If the binding exists but is uninitialized a *ReferenceError* is thrown, regardless of the value of _S_.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          DeleteBinding(N)
+        </td>
+        <td>
+          Delete a binding from an Environment Record. The String value _N_ is the text of the bound name. If a binding for _N_ exists, remove the binding and return *true*. If the binding exists but cannot be removed return *false*. If the binding does not exist return *true*.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          HasThisBinding()
+        </td>
+        <td>
+          Determine if an Environment Record establishes a `this` binding. Return *true* if it does and *false* if it does not.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          HasSuperBinding()
+        </td>
+        <td>
+          Determine if an Environment Record establishes a `super` method binding. Return *true* if it does and *false* if it does not.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ins>HasClassBinding()</ins>
+        </td>
+        <td>
+          <ins>Determine if an Environment Record establishes a `class` binding. Return *true* if it does and *false* if it does not.</ins>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          WithBaseObject()
+        </td>
+        <td>
+          If this Environment Record is associated with a `with` statement, return the with object. Otherwise, return *undefined*.
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </emu-table>
+  <emu-import href="sec-declarative-environment-records-patch.html"></emu-import>
+  <emu-import href="sec-function-environment-records-patch.html"></emu-import>
+</emu-clause>
