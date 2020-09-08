@@ -1,0 +1,155 @@
+<emu-clause id="sec-ecmascript-function-objects">
+  <h1>ECMAScript Function Objects</h1>
+  <p>ECMAScript function objects encapsulate parameterized ECMAScript code closed over a lexical environment and support the dynamic evaluation of that code. An ECMAScript function object is an ordinary object and has the same internal slots and the same internal methods as other ordinary objects. The code of an ECMAScript function object may be either strict mode code (<emu-xref href="#sec-strict-mode-code"></emu-xref>) or non-strict code. An ECMAScript function object whose code is strict mode code is called a <dfn id="strict-function">strict function</dfn>. One whose code is not strict mode code is called a <dfn id="non-strict-function">non-strict function</dfn>.</p>
+  <p>In addition to [[Extensible]] and [[Prototype]], ECMAScript function objects also have the internal slots listed in <emu-xref href="#table-internal-slots-of-ecmascript-function-objects"></emu-xref>.</p>
+  <emu-table id="table-internal-slots-of-ecmascript-function-objects" caption="Internal Slots of ECMAScript Function Objects" oldids="table-27">
+    <table>
+      <tbody>
+      <tr>
+        <th>
+          Internal Slot
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td>
+          [[Environment]]
+        </td>
+        <td>
+          Environment Record
+        </td>
+        <td>
+          The Environment Record that the function was closed over. Used as the outer environment when evaluating the code of the function.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[FormalParameters]]
+        </td>
+        <td>
+          Parse Node
+        </td>
+        <td>
+          The root parse node of the source text that defines the function's formal parameter list.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[ECMAScriptCode]]
+        </td>
+        <td>
+          Parse Node
+        </td>
+        <td>
+          The root parse node of the source text that defines the function's body.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[ConstructorKind]]
+        </td>
+        <td>
+          ~base~ | ~derived~
+        </td>
+        <td>
+          Whether or not the function is a derived class constructor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[Realm]]
+        </td>
+        <td>
+          Realm Record
+        </td>
+        <td>
+          The realm in which the function was created and which provides any intrinsic objects that are accessed when evaluating the function.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[ScriptOrModule]]
+        </td>
+        <td>
+          Script Record or Module Record
+        </td>
+        <td>
+          The script or module in which the function was created.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[ThisMode]]
+        </td>
+        <td>
+          ~lexical~ | ~strict~ | ~global~
+        </td>
+        <td>
+          Defines how `this` references are interpreted within the formal parameters and code body of the function. ~lexical~ means that `this` refers to the *this* value of a lexically enclosing function. ~strict~ means that the *this* value is used exactly as provided by an invocation of the function. ~global~ means that a *this* value of *undefined* or *null* is interpreted as a reference to the global object, and any other *this* value is first passed to ToObject.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[Strict]]
+        </td>
+        <td>
+          Boolean
+        </td>
+        <td>
+          *true* if this is a strict function, *false* if this is a non-strict function.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[HomeObject]]
+        </td>
+        <td>
+          Object
+        </td>
+        <td>
+          If the function uses `super`, this is the object whose [[GetPrototypeOf]] provides the object where `super` property lookups begin.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ins>[[InitialClassObject]]</ins>
+        </td>
+        <td>
+          <ins>Object | *undefined*</ins>
+        </td>
+        <td>
+          <ins>If the function has `class` property access, this is the function object where `class` property lookups begin.</ins>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[SourceText]]
+        </td>
+        <td>
+          sequence of Unicode code points
+        </td>
+        <td>
+          The <emu-xref href="#sec-source-text">source text</emu-xref> that defines the function.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [[IsClassConstructor]]
+        </td>
+        <td>
+          Boolean
+        </td>
+        <td>
+          Indicates whether the function is a class constructor. (If *true*, invoking the function's [[Call]] will immediately throw a *TypeError* exception.)
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </emu-table>
+  <emu-import href="sec-makemethod-patch.html"></emu-import>
+</emu-clause>

@@ -1,0 +1,22 @@
+<emu-clause id="sec-left-hand-side-expressions">
+  <h1>Left-Hand-Side Expressions</h1>
+  <emu-grammar>
+    MemberExpression[Yield, Await] :
+        PrimaryExpression[?Yield, ?Await]
+        MemberExpression[?Yield, ?Await] `[` Expression[+In, ?Yield, ?Await] `]`
+        MemberExpression[?Yield, ?Await] `.` IdentifierName
+        MemberExpression[?Yield, ?Await] TemplateLiteral[?Yield, ?Await, +Tagged]
+        SuperProperty[?Yield, ?Await]
+        <ins>ClassProperty[?Yield, ?Await]</ins>
+        MetaProperty
+        `new` MemberExpression[?Yield, ?Await] Arguments[?Yield, ?Await]
+
+    <ins>
+    ClassProperty[Yield, Await] :
+        `class` `[` Expression[+In, ?Yield, ?Await] `]`
+        `class` `.` IdentifierName
+        `class` `.` PrivateIdentifier
+    </ins>
+  </emu-grammar>
+  <emu-include href="sec-class-keyword-patch.html"></emu-include>
+</emu-clause>
