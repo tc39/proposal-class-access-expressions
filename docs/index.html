@@ -2,20 +2,25 @@
 <head><meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <link rel="spec" href="es2015">
-<title>ECMAScript 'class'-property access expressions</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"sec-intro","aoid":null,"title":"Introduction","titleHTML":"Introduction","number":"","namespace":"<no location>","location":"","referencingIds":[],"key":"Introduction"},{"type":"table","id":"table-abstract-methods-of-environment-records","number":1,"caption":"Table 1: Abstract Methods of Environment Records","referencingIds":["_ref_0","_ref_2"],"namespace":"<no location>","location":"","key":"Table 1: Abstract Methods of Environment Records"},{"type":"clause","id":"sec-declarative-environment-records-hasclassbinding","aoid":null,"title":"HasClassBinding ( )","titleHTML":"<ins>HasClassBinding ( )</ins>","number":"1.1.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"HasClassBinding ( )"},{"type":"clause","id":"sec-declarative-environment-records","aoid":null,"title":"Declarative Environment Records","titleHTML":"Declarative Environment Records","number":"1.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Declarative Environment Records"},{"type":"term","term":"function Environment Record","refId":"sec-function-environment-records","referencingIds":[],"namespace":"<no location>","location":"","key":"function Environment Record"},{"type":"table","id":"table-additional-fields-of-function-environment-records","number":2,"caption":"Table 2: Additional Fields of Function Environment Records","referencingIds":["_ref_1"],"namespace":"<no location>","location":"","key":"Table 2: Additional Fields of Function Environment Records"},{"type":"table","id":"table-additional-methods-of-function-environment-records","number":3,"caption":"Table 3: Additional Methods of Function Environment Records","referencingIds":["_ref_3"],"namespace":"<no location>","location":"","key":"Table 3: Additional Methods of Function Environment Records"},{"type":"clause","id":"sec-function-environment-records-hasclassbinding","aoid":null,"title":"HasClassBinding ( )","titleHTML":"<ins>HasClassBinding ( )</ins>","number":"1.1.1.2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"HasClassBinding ( )"},{"type":"clause","id":"sec-getclassbinding","aoid":null,"title":"GetClassBinding ( )","titleHTML":"<ins>GetClassBinding ( )</ins>","number":"1.1.1.2.2","namespace":"<no location>","location":"","referencingIds":[],"key":"GetClassBinding ( )"},{"type":"clause","id":"sec-function-environment-records","aoid":null,"title":"Function Environment Records","titleHTML":"Function Environment Records","number":"1.1.1.2","namespace":"<no location>","location":"","referencingIds":["_ref_26","_ref_27"],"key":"Function Environment Records"},{"type":"clause","id":"sec-the-environment-record-type-hierarchy","aoid":null,"title":"The Environment Record Type Hierarchy","titleHTML":"The Environment Record Type Hierarchy","number":"1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"The Environment Record Type Hierarchy"},{"type":"clause","id":"sec-environment-records","aoid":null,"title":"Environment Records","titleHTML":"Environment Records","number":"1.1","namespace":"<no location>","location":"","referencingIds":["_ref_5","_ref_6","_ref_7","_ref_8","_ref_9","_ref_10","_ref_11","_ref_12","_ref_13","_ref_14","_ref_15","_ref_16","_ref_17","_ref_18","_ref_19","_ref_20","_ref_21","_ref_22","_ref_23","_ref_24","_ref_25","_ref_29","_ref_30"],"key":"Environment Records"},{"type":"clause","id":"sec-executable-code-and-execution-contexts","aoid":null,"title":"Executable Code and Execution Contexts","titleHTML":"Executable Code and Execution Contexts","number":"1","namespace":"<no location>","location":"","referencingIds":[],"key":"Executable Code and Execution Contexts"},{"type":"term","term":"strict function","refId":"sec-ecmascript-function-objects","referencingIds":["_ref_32"],"id":"strict-function","namespace":"<no location>","location":"","key":"strict function"},{"type":"term","term":"non-strict function","refId":"sec-ecmascript-function-objects","referencingIds":["_ref_33"],"id":"non-strict-function","namespace":"<no location>","location":"","key":"non-strict function"},{"type":"table","id":"table-internal-slots-of-ecmascript-function-objects","number":4,"caption":"Table 4: Internal Slots of ECMAScript Function Objects","referencingIds":["_ref_4"],"namespace":"<no location>","location":"","key":"Table 4: Internal Slots of ECMAScript Function Objects"},{"type":"op","aoid":"MakeMethod","refId":"sec-makemethod","location":"","referencingIds":[],"key":"MakeMethod"},{"type":"clause","id":"sec-makemethod","aoid":"MakeMethod","title":"MakeMethod ( F, homeObject, classObject )","titleHTML":"MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )","number":"2.1.1","namespace":"<no location>","location":"","referencingIds":["_ref_38","_ref_42","_ref_46","_ref_50","_ref_55","_ref_60","_ref_75"],"key":"MakeMethod ( F, homeObject, classObject )"},{"type":"clause","id":"sec-ecmascript-function-objects","aoid":null,"title":"ECMAScript Function Objects","titleHTML":"ECMAScript Function Objects","number":"2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Function Objects"},{"type":"clause","id":"sec-ordinary-and-exotic-objects-behaviours","aoid":null,"title":"Ordinary and Exotic Object Behaviors","titleHTML":"Ordinary and Exotic Object Behaviors","number":"2","namespace":"<no location>","location":"","referencingIds":[],"key":"Ordinary and Exotic Object Behaviors"},{"type":"clause","id":"sec-object-initializer-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"3.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-object-initializer","aoid":null,"title":"Object Initializer","titleHTML":"Object Initializer","number":"3.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Object Initializer"},{"type":"clause","id":"sec-primary-expression","aoid":null,"title":"Primary Expression","titleHTML":"Primary Expression","number":"3.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Primary Expression"},{"type":"production","id":"prod-MemberExpression","name":"MemberExpression","referencingIds":["_ref_78","_ref_79","_ref_80","_ref_82"],"namespace":"<no location>","location":"","key":"MemberExpression"},{"type":"production","id":"prod-ClassProperty","name":"ClassProperty","referencingIds":["_ref_81"],"namespace":"<no location>","location":"","key":"ClassProperty"},{"type":"clause","id":"sec-left-hand-side-expressions","aoid":null,"title":"Left-Hand-Side Expressions","titleHTML":"Left-Hand-Side Expressions","number":"3.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Left-Hand-Side Expressions"},{"type":"clause","id":"sec-ecmascript-language-expressions","aoid":null,"title":"ECMAScript Language: Expressions","titleHTML":"ECMAScript Language: Expressions","number":"3","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Language: Expressions"},{"type":"production","id":"prod-MethodDefinition","name":"MethodDefinition","referencingIds":["_ref_83","_ref_84","_ref_85","_ref_86","_ref_90","_ref_91"],"namespace":"<no location>","location":"","key":"MethodDefinition"},{"type":"clause","id":"sec-runtime-semantics-definemethod","aoid":null,"title":"Runtime Semantics: DefineMethod","titleHTML":"Runtime Semantics: DefineMethod","number":"4.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: DefineMethod"},{"type":"production","id":"prod-FormalParameters","name":"FormalParameters","referencingIds":[],"namespace":"<no location>","location":"","key":"FormalParameters"},{"type":"clause","id":"sec-method-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.1.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-method-definitions","aoid":null,"title":"Method Definitions","titleHTML":"Method Definitions","number":"4.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Method Definitions"},{"type":"production","id":"prod-GeneratorMethod","name":"GeneratorMethod","referencingIds":["_ref_87","_ref_88"],"namespace":"<no location>","location":"","key":"GeneratorMethod"},{"type":"clause","id":"sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-generator-function-definitions","aoid":null,"title":"Generator Function Definitions","titleHTML":"Generator Function Definitions","number":"4.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Generator Function Definitions"},{"type":"clause","id":"sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.3.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-generator-function-definitions","aoid":null,"title":"Generator Function Definitions","titleHTML":"Generator Function Definitions","number":"4.3","namespace":"<no location>","location":"","referencingIds":[],"key":"Generator Function Definitions"},{"type":"production","id":"prod-AsyncGeneratorMethod","name":"AsyncGeneratorMethod","referencingIds":["_ref_89"],"namespace":"<no location>","location":"","key":"AsyncGeneratorMethod"},{"type":"clause","id":"sec-asyncgenerator-definitions-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.4.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-asyncgenerator-function-definitions","aoid":null,"title":"Async Generator Function Definitions","titleHTML":"Async Generator Function Definitions","number":"4.4","namespace":"<no location>","location":"","referencingIds":[],"key":"Async Generator Function Definitions"},{"type":"production","id":"prod-ClassTail","name":"ClassTail","referencingIds":[],"namespace":"<no location>","location":"","key":"ClassTail"},{"type":"clause","id":"sec-runtime-semantics-classdefinitionevaluation","aoid":null,"title":"Runtime Semantics: ClassDefinitionEvaluation","titleHTML":"Runtime Semantics: ClassDefinitionEvaluation","number":"4.5.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: ClassDefinitionEvaluation"},{"type":"clause","id":"sec-class-definitions","aoid":null,"title":"Class Definitions","titleHTML":"Class Definitions","number":"4.5","namespace":"<no location>","location":"","referencingIds":[],"key":"Class Definitions"},{"type":"production","id":"prod-AsyncMethod","name":"AsyncMethod","referencingIds":["_ref_92"],"namespace":"<no location>","location":"","key":"AsyncMethod"},{"type":"clause","id":"sec-async-function-definitions-PropertyDefinitionEvaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.6.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-async-function-definitions","aoid":null,"title":"Async Function Definitions","titleHTML":"Async Function Definitions","number":"4.6","namespace":"<no location>","location":"","referencingIds":[],"key":"Async Function Definitions"},{"type":"clause","id":"sec-ecmascript-language-functions-and-classes","aoid":null,"title":"ECMAScript Language: Functions and Classes","titleHTML":"ECMAScript Language: Functions and Classes","number":"4","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Language: Functions and Classes"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"<no location>","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
+<title>ECMAScript 'class'-property access expressions</title><script type="application/json" id="menu-search-biblio">[{"type":"clause","id":"sec-intro","aoid":null,"title":"Introduction","titleHTML":"Introduction","number":"","namespace":"<no location>","location":"","referencingIds":[],"key":"Introduction"},{"type":"table","id":"table-abstract-methods-of-environment-records","node":{},"number":1,"caption":"Table 1: Abstract Methods of Environment Records","referencingIds":["_ref_0","_ref_2"],"namespace":"<no location>","location":"","key":"Table 1: Abstract Methods of Environment Records"},{"type":"clause","id":"sec-declarative-environment-records-hasclassbinding","aoid":null,"title":"HasClassBinding ( )","titleHTML":"<ins>HasClassBinding ( )</ins>","number":"1.1.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"HasClassBinding ( )"},{"type":"clause","id":"sec-declarative-environment-records","aoid":null,"title":"Declarative Environment Records","titleHTML":"Declarative Environment Records","number":"1.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Declarative Environment Records"},{"type":"term","term":"function Environment Record","refId":"sec-function-environment-records","referencingIds":[],"namespace":"<no location>","location":"","key":"function Environment Record"},{"type":"table","id":"table-additional-fields-of-function-environment-records","node":{},"number":2,"caption":"Table 2: Additional Fields of Function Environment Records","referencingIds":["_ref_1"],"namespace":"<no location>","location":"","key":"Table 2: Additional Fields of Function Environment Records"},{"type":"table","id":"table-additional-methods-of-function-environment-records","node":{},"number":3,"caption":"Table 3: Additional Methods of Function Environment Records","referencingIds":["_ref_3"],"namespace":"<no location>","location":"","key":"Table 3: Additional Methods of Function Environment Records"},{"type":"clause","id":"sec-function-environment-records-hasclassbinding","aoid":null,"title":"HasClassBinding ( )","titleHTML":"<ins>HasClassBinding ( )</ins>","number":"1.1.1.2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"HasClassBinding ( )"},{"type":"clause","id":"sec-getclassbinding","aoid":null,"title":"GetClassBinding ( )","titleHTML":"<ins>GetClassBinding ( )</ins>","number":"1.1.1.2.2","namespace":"<no location>","location":"","referencingIds":[],"key":"GetClassBinding ( )"},{"type":"clause","id":"sec-function-environment-records","aoid":null,"title":"Function Environment Records","titleHTML":"Function Environment Records","number":"1.1.1.2","namespace":"<no location>","location":"","referencingIds":["_ref_26","_ref_27"],"key":"Function Environment Records"},{"type":"clause","id":"sec-the-environment-record-type-hierarchy","aoid":null,"title":"The Environment Record Type Hierarchy","titleHTML":"The Environment Record Type Hierarchy","number":"1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"The Environment Record Type Hierarchy"},{"type":"clause","id":"sec-environment-records","aoid":null,"title":"Environment Records","titleHTML":"Environment Records","number":"1.1","namespace":"<no location>","location":"","referencingIds":["_ref_5","_ref_6","_ref_7","_ref_8","_ref_9","_ref_10","_ref_11","_ref_12","_ref_13","_ref_14","_ref_15","_ref_16","_ref_17","_ref_18","_ref_19","_ref_20","_ref_21","_ref_22","_ref_23","_ref_24","_ref_25","_ref_29","_ref_30"],"key":"Environment Records"},{"type":"clause","id":"sec-executable-code-and-execution-contexts","aoid":null,"title":"Executable Code and Execution Contexts","titleHTML":"Executable Code and Execution Contexts","number":"1","namespace":"<no location>","location":"","referencingIds":[],"key":"Executable Code and Execution Contexts"},{"type":"term","term":"strict function","refId":"sec-ecmascript-function-objects","referencingIds":["_ref_32"],"id":"strict-function","namespace":"<no location>","location":"","key":"strict function"},{"type":"term","term":"non-strict function","refId":"sec-ecmascript-function-objects","referencingIds":["_ref_33"],"id":"non-strict-function","namespace":"<no location>","location":"","key":"non-strict function"},{"type":"table","id":"table-internal-slots-of-ecmascript-function-objects","node":{},"number":4,"caption":"Table 4: Internal Slots of ECMAScript Function Objects","referencingIds":["_ref_4"],"namespace":"<no location>","location":"","key":"Table 4: Internal Slots of ECMAScript Function Objects"},{"type":"op","aoid":"MakeMethod","refId":"sec-makemethod","location":"","referencingIds":[],"key":"MakeMethod"},{"type":"clause","id":"sec-makemethod","aoid":"MakeMethod","title":"MakeMethod ( F, homeObject, classObject )","titleHTML":"MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )","number":"2.1.1","namespace":"<no location>","location":"","referencingIds":["_ref_39","_ref_44","_ref_49","_ref_54","_ref_60","_ref_66","_ref_82"],"key":"MakeMethod ( F, homeObject, classObject )"},{"type":"clause","id":"sec-ecmascript-function-objects","aoid":null,"title":"ECMAScript Function Objects","titleHTML":"ECMAScript Function Objects","number":"2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Function Objects"},{"type":"clause","id":"sec-ordinary-and-exotic-objects-behaviours","aoid":null,"title":"Ordinary and Exotic Object Behaviors","titleHTML":"Ordinary and Exotic Object Behaviors","number":"2","namespace":"<no location>","location":"","referencingIds":[],"key":"Ordinary and Exotic Object Behaviors"},{"type":"clause","id":"sec-object-initializer-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"3.1.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-object-initializer","aoid":null,"title":"Object Initializer","titleHTML":"Object Initializer","number":"3.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Object Initializer"},{"type":"clause","id":"sec-primary-expression","aoid":null,"title":"Primary Expression","titleHTML":"Primary Expression","number":"3.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Primary Expression"},{"type":"production","id":"prod-ibs","name":"ibs","referencingIds":[],"namespace":"<no location>","location":"","key":"ibs"},{"type":"clause","id":"sec-left-hand-side-expressions","aoid":null,"title":"Left-Hand-Side Expressions","titleHTML":"Left-Hand-Side Expressions","number":"3.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Left-Hand-Side Expressions"},{"type":"clause","id":"sec-ecmascript-language-expressions","aoid":null,"title":"ECMAScript Language: Expressions","titleHTML":"ECMAScript Language: Expressions","number":"3","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Language: Expressions"},{"type":"production","id":"prod-pressions","name":"pressions","referencingIds":[],"namespace":"<no location>","location":"","key":"pressions"},{"type":"production","id":"prod-stage","name":"stage","referencingIds":[],"namespace":"<no location>","location":"","key":"stage"},{"type":"production","id":"prod-contributors","name":"contributors","referencingIds":[],"namespace":"<no location>","location":"","key":"contributors"},{"type":"clause","id":"sec-runtime-semantics-definemethod","aoid":null,"title":"Runtime Semantics: DefineMethod","titleHTML":"Runtime Semantics: DefineMethod","number":"4.1.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: DefineMethod"},{"type":"production","id":"prod-FormalParameters","name":"FormalParameters","referencingIds":[],"namespace":"<no location>","location":"","key":"FormalParameters"},{"type":"clause","id":"sec-method-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.1.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-method-definitions","aoid":null,"title":"Method Definitions","titleHTML":"Method Definitions","number":"4.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Method Definitions"},{"type":"production","id":"prod-ction","name":"ction","referencingIds":[],"namespace":"<no location>","location":"","key":"ction"},{"type":"clause","id":"sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.2.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-generator-function-definitions","aoid":null,"title":"Generator Function Definitions","titleHTML":"Generator Function Definitions","number":"4.2","namespace":"<no location>","location":"","referencingIds":[],"key":"Generator Function Definitions"},{"type":"clause","id":"sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.3.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-generator-function-definitions","aoid":null,"title":"Generator Function Definitions","titleHTML":"Generator Function Definitions","number":"4.3","namespace":"<no location>","location":"","referencingIds":[],"key":"Generator Function Definitions"},{"type":"clause","id":"sec-asyncgenerator-definitions-propertydefinitionevaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.4.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-asyncgenerator-function-definitions","aoid":null,"title":"Async Generator Function Definitions","titleHTML":"Async Generator Function Definitions","number":"4.4","namespace":"<no location>","location":"","referencingIds":[],"key":"Async Generator Function Definitions"},{"type":"production","id":"prod-metadata","name":"metadata","referencingIds":[],"namespace":"<no location>","location":"","key":"metadata"},{"type":"production","id":"prod-title","name":"title","referencingIds":[],"namespace":"<no location>","location":"","key":"title"},{"type":"clause","id":"sec-runtime-semantics-classdefinitionevaluation","aoid":null,"title":"Runtime Semantics: ClassDefinitionEvaluation","titleHTML":"Runtime Semantics: ClassDefinitionEvaluation","number":"4.5.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: ClassDefinitionEvaluation"},{"type":"clause","id":"sec-class-definitions","aoid":null,"title":"Class Definitions","titleHTML":"Class Definitions","number":"4.5","namespace":"<no location>","location":"","referencingIds":[],"key":"Class Definitions"},{"type":"clause","id":"sec-async-function-definitions-PropertyDefinitionEvaluation","aoid":null,"title":"Runtime Semantics: PropertyDefinitionEvaluation","titleHTML":"Runtime Semantics: PropertyDefinitionEvaluation","number":"4.6.1","namespace":"<no location>","location":"","referencingIds":[],"key":"Runtime Semantics: PropertyDefinitionEvaluation"},{"type":"clause","id":"sec-async-function-definitions","aoid":null,"title":"Async Function Definitions","titleHTML":"Async Function Definitions","number":"4.6","namespace":"<no location>","location":"","referencingIds":[],"key":"Async Function Definitions"},{"type":"clause","id":"sec-ecmascript-language-functions-and-classes","aoid":null,"title":"ECMAScript Language: Functions and Classes","titleHTML":"ECMAScript Language: Functions and Classes","number":"4","namespace":"<no location>","location":"","referencingIds":[],"key":"ECMAScript Language: Functions and Classes"},{"type":"clause","id":"sec-copyright-and-software-license","aoid":null,"title":"Copyright & Software License","titleHTML":"Copyright &amp; Software License","number":"A","namespace":"<no location>","location":"","referencingIds":[],"key":"Copyright & Software License"}]</script><script>"use strict";
 
 function Search(menu) {
   this.menu = menu;
   this.$search = document.getElementById('menu-search');
   this.$searchBox = document.getElementById('menu-search-box');
   this.$searchResults = document.getElementById('menu-search-results');
-  
+
   this.loadBiblio();
-  
+
   document.addEventListener('keydown', this.documentKeydown.bind(this));
-  
+
   this.$searchBox.addEventListener('keydown', debounce(this.searchBoxKeydown.bind(this), { stopPropagation: true }));
   this.$searchBox.addEventListener('keyup', debounce(this.searchBoxKeyup.bind(this), { stopPropagation: true }));
+
+  // Perform an initial search if the box is not empty.
+  if (this.$searchBox.value) {
+    this.search(this.$searchBox.value);
+  }
 }
 
 Search.prototype.loadBiblio = function () {
@@ -55,7 +60,7 @@ Search.prototype.searchBoxKeyup = function (e) {
   if (e.keyCode === 13 || e.keyCode === 9) {
     return;
   }
-  
+
   this.search(e.target.value);
 }
 
@@ -78,25 +83,23 @@ Search.prototype.triggerSearch = function (e) {
 // prefer shorter matches.
 function relevance(result, searchString) {
   var relevance = 0;
-  
+
   relevance = Math.max(0, 8 - result.match.chunks) << 7;
-  
+
   if (result.match.caseMatch) {
     relevance *= 2;
   }
-  
+
   if (result.match.prefix) {
     relevance += 2048
   }
-  
+
   relevance += Math.max(0, 255 - result.entry.key.length);
-  
+
   return relevance;
 }
 
 Search.prototype.search = function (searchString) {
-  var s = Date.now();
-
   if (searchString === '') {
     this.displayResults([]);
     this.hideSearch();
@@ -104,12 +107,12 @@ Search.prototype.search = function (searchString) {
   } else {
     this.showSearch();
   }
-  
+
   if (searchString.length === 1) {
     this.displayResults([]);
     return;
   }
-    
+
   var results;
 
   if (/^[\d\.]*$/.test(searchString)) {
@@ -120,7 +123,7 @@ Search.prototype.search = function (searchString) {
     });
   } else {
     results = [];
-    
+
     for (var i = 0; i < this.biblio.length; i++) {
       var entry = this.biblio[i];
       if (!entry.key) {
@@ -133,11 +136,11 @@ Search.prototype.search = function (searchString) {
         results.push({ entry: entry, match: match });
       }
     }
-  
+
     results.forEach(function (result) {
       result.relevance = relevance(result, searchString);
     });
-    
+
     results = results.sort(function (a, b) { return b.relevance - a.relevance });
 
   }
@@ -145,7 +148,7 @@ Search.prototype.search = function (searchString) {
   if (results.length > 50) {
     results = results.slice(0, 50);
   }
-  
+
   this.displayResults(results);
 }
 Search.prototype.hideSearch = function () {
@@ -162,7 +165,7 @@ Search.prototype.selectResult = function () {
   if ($first) {
     document.location = $first.getAttribute('href');
   }
-  
+
   this.$searchBox.value = '';
   this.$searchBox.blur();
   this.displayResults([]);
@@ -176,7 +179,7 @@ Search.prototype.selectResult = function () {
 Search.prototype.displayResults = function (results) {
   if (results.length > 0) {
     this.$searchResults.classList.remove('no-results');
-    
+
     var html = '<ul>';
 
     results.forEach(function (result) {
@@ -193,7 +196,7 @@ Search.prototype.displayResults = function (results) {
       } else if (entry.type === 'production') {
         text = entry.key;
         cssClass = 'prod';
-        id = entry.id;  
+        id = entry.id;
       } else if (entry.type === 'op') {
         text = entry.key;
         cssClass = 'op';
@@ -205,7 +208,7 @@ Search.prototype.displayResults = function (results) {
       }
 
       if (text) {
-        html += '<li class=menu-search-result-' + cssClass + '><a href="#' + id + '">' + text + '</a></li>'
+        html += '<li class=menu-search-result-' + cssClass + '><a href="#' + id + '">' + text + '</a></li>';
       }
     });
 
@@ -228,7 +231,7 @@ function Menu() {
   this.$toc = document.querySelector('#menu-toc > ol');
   this.$specContainer = document.getElementById('spec-container');
   this.search = new Search(this);
-  
+
   this._pinnedIds = {}; 
   this.loadPinEntries();
 
@@ -273,9 +276,9 @@ function Menu() {
                     && target.offsetHeight + target.scrollTop >= target.scrollHeight;
 
     if (offBottom) {
-		  e.preventDefault();
-	  }
-  })
+      e.preventDefault();
+    }
+  });
 }
 
 Menu.prototype.documentKeydown = function (e) {
@@ -302,7 +305,7 @@ Menu.prototype.revealInToc = function (path) {
     current[i].classList.remove('revealed');
     current[i].classList.remove('revealed-leaf');
   }
-  
+
   var current = this.$toc;
   var index = 0;
   while (index < path.length) {
@@ -313,7 +316,7 @@ Menu.prototype.revealInToc = function (path) {
         if (index === path.length - 1) {
           children[i].classList.add('revealed-leaf');
           var rect = children[i].getBoundingClientRect();
-          this.$toc.getBoundingClientRect().top
+          // this.$toc.getBoundingClientRect().top;
           var tocRect = this.$toc.getBoundingClientRect();
           if (rect.top + 10 > tocRect.bottom) {
             this.$toc.scrollTop = this.$toc.scrollTop + (rect.top - tocRect.bottom) + (rect.bottom - rect.top);
@@ -324,29 +327,27 @@ Menu.prototype.revealInToc = function (path) {
         current = children[i].querySelector('ol');
         index++;
         break;
-      }      
+      }
     }
-    
+
   }
 }
 
 function findActiveClause(root, path) {
   var clauses = new ClauseWalker(root);
   var $clause;
-  var found = false;
   var path = path || [];
-  
+
   while ($clause = clauses.nextNode()) {
     var rect = $clause.getBoundingClientRect();
-    var $header = $clause.children[0];
+    var $header = $clause.querySelector("h1");
     var marginTop = parseInt(getComputedStyle($header)["margin-top"]);
-    
+
     if ((rect.top - marginTop) <= 0 && rect.bottom > 0) {
-      found = true;
       return findActiveClause($clause, path.concat($clause)) || path;
     }
   }
-  
+
   return path;
 }
 
@@ -371,7 +372,7 @@ function ClauseWalker(root) {
     },
     false
     );
-  
+
   return treeWalker;
 }
 
@@ -454,7 +455,7 @@ Menu.prototype.loadPinEntries = function () {
   } catch (e) {
     return;
   }
-  
+
   var pinsString = window.localStorage.pinEntries;
   if (!pinsString) return;
   var pins = JSON.parse(pinsString);
@@ -485,6 +486,11 @@ function init() {
   var $container = document.getElementById('spec-container');
   $container.addEventListener('mouseover', debounce(function (e) {
     Toolbox.activateIfMouseOver(e);
+  }));
+  document.addEventListener('keydown', debounce(function (e) {
+    if (e.code === "Escape" && Toolbox.active) {
+      Toolbox.deactivate();
+    }
   }));
 }
 
@@ -584,12 +590,11 @@ function fuzzysearch (searchString, haystack, caseInsensitive) {
   var qlen = searchString.length;
   var chunks = 1;
   var finding = false;
-  var prefix = true;
-  
+
   if (qlen > tlen) {
     return false;
   }
-  
+
   if (qlen === tlen) {
     if (searchString === haystack) {
       return { caseMatch: true, chunks: 1, prefix: true };
@@ -599,7 +604,7 @@ function fuzzysearch (searchString, haystack, caseInsensitive) {
       return false;
     }
   }
-  
+
   outer: for (var i = 0, j = 0; i < qlen; i++) {
     var nch = searchString[i];
     while (j < tlen) {
@@ -613,12 +618,12 @@ function fuzzysearch (searchString, haystack, caseInsensitive) {
         finding = false;
       }
     }
-    
-    if (caseInsensitive) { return false }
-    
+
+    if (caseInsensitive) { return false; }
+
     return fuzzysearch(searchString.toLowerCase(), haystack.toLowerCase(), true);
   }
-  
+
   return { caseMatch: !caseInsensitive, chunks: chunks, prefix: j <= qlen };
 }
 
@@ -775,7 +780,6 @@ var referencePane = {
       var target = document.getElementById(id);
       var cid = findParentClauseId(target);
       var clause = menu.search.biblio.byId[cid];
-      var dupCount = 0;
       return { id: id, clause: clause }
     }).sort(function (a, b) {
       return sortByClauseNumber(a.clause, b.clause);
@@ -815,7 +819,7 @@ function sortByClauseNumber(c1, c2) {
     if (i >= c2c.length) {
       return 1;
     }
-    
+
     var c1 = c1c[i];
     var c2 = c2c[i];
     var c1cn = Number(c1);
@@ -975,16 +979,43 @@ emu-const {
 emu-val {
   font-weight: bold;
 }
-emu-alg ol, emu-alg ol ol ol ol {
-    list-style-type: decimal;
+
+/* depth 1 */
+emu-alg ol,
+/* depth 4 */
+emu-alg ol ol ol ol,
+emu-alg ol.nested-thrice,
+emu-alg ol.nested-twice ol,
+emu-alg ol.nested-once ol ol {
+  list-style-type: decimal;
 }
 
-emu-alg ol ol, emu-alg ol ol ol ol ol {
-    list-style-type: lower-alpha;
+/* depth 2 */
+emu-alg ol ol,
+emu-alg ol.nested-once,
+/* depth 5 */
+emu-alg ol ol ol ol ol,
+emu-alg ol.nested-four-times,
+emu-alg ol.nested-thrice ol,
+emu-alg ol.nested-twice ol ol,
+emu-alg ol.nested-once ol ol ol {
+  list-style-type: lower-alpha;
 }
 
-emu-alg ol ol ol, ol ol ol ol ol ol {
-    list-style-type: lower-roman;
+/* depth 3 */
+emu-alg ol ol ol,
+emu-alg ol.nested-twice,
+emu-alg ol.nested-once ol,
+/* depth 6 */
+emu-alg ol ol ol ol ol ol,
+emu-alg ol.nested-lots,
+emu-alg ol.nested-four-times ol,
+emu-alg ol.nested-thrice ol ol,
+emu-alg ol.nested-twice ol ol ol,
+emu-alg ol.nested-once ol ol ol ol,
+/* depth 7+ */
+emu-alg ol.nested-lots ol {
+  list-style-type: lower-roman;
 }
 
 emu-eqn {
@@ -1035,6 +1066,10 @@ emu-note > div.note-contents > p:last-of-type {
   margin-bottom: 0;
 }
 
+emu-table td code {
+  white-space: normal;
+} 
+
 emu-figure {
   display: block;
 }
@@ -1059,6 +1094,10 @@ emu-table figure {
 
 emu-production {
     display: block;
+}
+
+emu-grammar[type="example"] emu-production,
+emu-grammar[type="definition"] emu-production {
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 5ex;
@@ -1086,6 +1125,7 @@ emu-gann {
 }
 
 emu-gann emu-t:last-child,
+emu-gann emu-gprose:last-child,
 emu-gann emu-nt:last-child {
     margin-right: 0;
 }
@@ -1140,10 +1180,6 @@ emu-mods {
     font-weight: normal;
 }
 
-emu-production[collapsed] emu-mods {
-  display: none;
-}
-
 emu-params, emu-opt {
   margin-right: 1ex;
   font-family: monospace;
@@ -1160,6 +1196,10 @@ emu-opt {
 emu-gprose {
     font-size: 0.9em;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+emu-production emu-gprose {
+    margin-right: 1ex;
 }
 
 h1.shortname {
@@ -1189,7 +1229,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 .secnum {
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 h1 span.title {
@@ -1804,123 +1844,102 @@ li.menu-search-result-term:before {
     display: none; 
   }
 }
-</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-intro" title="Introduction">Introduction</a></li><li><span class="item-toggle">◢</span><a href="#sec-executable-code-and-execution-contexts" title="Executable Code and Execution Contexts"><span class="secnum">1</span> Executable Code and Execution Contexts</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-environment-records" title="Environment Records"><span class="secnum">1.1</span> Environment Records</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-the-environment-record-type-hierarchy" title="The Environment Record Type Hierarchy"><span class="secnum">1.1.1</span> The Environment Record Type Hierarchy</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-declarative-environment-records" title="Declarative Environment Records"><span class="secnum">1.1.1.1</span> Declarative Environment Records</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-declarative-environment-records-hasclassbinding" title="HasClassBinding ( )"><span class="secnum">1.1.1.1.1</span> <ins>HasClassBinding ( )</ins></a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-function-environment-records" title="Function Environment Records"><span class="secnum">1.1.1.2</span> Function Environment Records</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-function-environment-records-hasclassbinding" title="HasClassBinding ( )"><span class="secnum">1.1.1.2.1</span> <ins>HasClassBinding ( )</ins></a></li><li><span class="item-toggle-none"></span><a href="#sec-getclassbinding" title="GetClassBinding ( )"><span class="secnum">1.1.1.2.2</span> <ins>GetClassBinding ( )</ins></a></li></ol></li></ol></li></ol></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ordinary-and-exotic-objects-behaviours" title="Ordinary and Exotic Object Behaviors"><span class="secnum">2</span> Ordinary and Exotic Object Behaviors</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-function-objects" title="ECMAScript Function Objects"><span class="secnum">2.1</span> ECMAScript Function Objects</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-makemethod" title="MakeMethod ( F, homeObject, classObject )"><span class="secnum">2.1.1</span> MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )</a></li></ol></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-language-expressions" title="ECMAScript Language: Expressions"><span class="secnum">3</span> ECMAScript Language: Expressions</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-primary-expression" title="Primary Expression"><span class="secnum">3.1</span> Primary Expression</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-object-initializer" title="Object Initializer"><span class="secnum">3.1.1</span> Object Initializer</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-object-initializer-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">3.1.1.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-left-hand-side-expressions" title="Left-Hand-Side Expressions"><span class="secnum">3.2</span> Left-Hand-Side Expressions</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-language-functions-and-classes" title="ECMAScript Language: Functions and Classes"><span class="secnum">4</span> ECMAScript Language: Functions and Classes</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-method-definitions" title="Method Definitions"><span class="secnum">4.1</span> Method Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-runtime-semantics-definemethod" title="Runtime Semantics: DefineMethod"><span class="secnum">4.1.1</span> RS: DefineMethod</a></li><li><span class="item-toggle-none"></span><a href="#sec-method-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.1.2</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-generator-function-definitions" title="Generator Function Definitions"><span class="secnum">4.2</span> Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.2.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-generator-function-definitions" title="Generator Function Definitions"><span class="secnum">4.3</span> Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.3.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-asyncgenerator-function-definitions" title="Async Generator Function Definitions"><span class="secnum">4.4</span> Async Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-asyncgenerator-definitions-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.4.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-class-definitions" title="Class Definitions"><span class="secnum">4.5</span> Class Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-runtime-semantics-classdefinitionevaluation" title="Runtime Semantics: ClassDefinitionEvaluation"><span class="secnum">4.5.1</span> RS: ClassDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-async-function-definitions" title="Async Function Definitions"><span class="secnum">4.6</span> Async Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-async-function-definitions-PropertyDefinitionEvaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.6.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / September 7, 2020</h1><h1 class="title">ECMAScript 'class'-property access expressions</h1>
+</style></head><body><div id="menu-toggle">☰</div><div id="menu-spacer"></div><div id="menu"><div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search..."><div id="menu-search-results" class="inactive"></div></div><div id="menu-pins"><div class="menu-pane-header">Pins</div><ul id="menu-pins-list"></ul></div><div class="menu-pane-header">Table of Contents</div><div id="menu-toc"><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-intro" title="Introduction">Introduction</a></li><li><span class="item-toggle">◢</span><a href="#sec-executable-code-and-execution-contexts" title="Executable Code and Execution Contexts"><span class="secnum">1</span> Executable Code and Execution Contexts</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-environment-records" title="Environment Records"><span class="secnum">1.1</span> Environment Records</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-the-environment-record-type-hierarchy" title="The Environment Record Type Hierarchy"><span class="secnum">1.1.1</span> The Environment Record Type Hierarchy</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-declarative-environment-records" title="Declarative Environment Records"><span class="secnum">1.1.1.1</span> Declarative Environment Records</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-declarative-environment-records-hasclassbinding" title="HasClassBinding ( )"><span class="secnum">1.1.1.1.1</span> <ins>HasClassBinding ( )</ins></a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-function-environment-records" title="Function Environment Records"><span class="secnum">1.1.1.2</span> Function Environment Records</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-function-environment-records-hasclassbinding" title="HasClassBinding ( )"><span class="secnum">1.1.1.2.1</span> <ins>HasClassBinding ( )</ins></a></li><li><span class="item-toggle-none"></span><a href="#sec-getclassbinding" title="GetClassBinding ( )"><span class="secnum">1.1.1.2.2</span> <ins>GetClassBinding ( )</ins></a></li></ol></li></ol></li></ol></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ordinary-and-exotic-objects-behaviours" title="Ordinary and Exotic Object Behaviors"><span class="secnum">2</span> Ordinary and Exotic Object Behaviors</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-function-objects" title="ECMAScript Function Objects"><span class="secnum">2.1</span> ECMAScript Function Objects</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-makemethod" title="MakeMethod ( F, homeObject, classObject )"><span class="secnum">2.1.1</span> MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )</a></li></ol></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-language-expressions" title="ECMAScript Language: Expressions"><span class="secnum">3</span> ECMAScript Language: Expressions</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-primary-expression" title="Primary Expression"><span class="secnum">3.1</span> Primary Expression</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-object-initializer" title="Object Initializer"><span class="secnum">3.1.1</span> Object Initializer</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-object-initializer-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">3.1.1.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-left-hand-side-expressions" title="Left-Hand-Side Expressions"><span class="secnum">3.2</span> Left-Hand-Side Expressions</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-ecmascript-language-functions-and-classes" title="ECMAScript Language: Functions and Classes"><span class="secnum">4</span> ECMAScript Language: Functions and Classes</a><ol class="toc"><li><span class="item-toggle">◢</span><a href="#sec-method-definitions" title="Method Definitions"><span class="secnum">4.1</span> Method Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-runtime-semantics-definemethod" title="Runtime Semantics: DefineMethod"><span class="secnum">4.1.1</span> RS: DefineMethod</a></li><li><span class="item-toggle-none"></span><a href="#sec-method-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.1.2</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-generator-function-definitions" title="Generator Function Definitions"><span class="secnum">4.2</span> Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.2.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-generator-function-definitions" title="Generator Function Definitions"><span class="secnum">4.3</span> Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.3.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-asyncgenerator-function-definitions" title="Async Generator Function Definitions"><span class="secnum">4.4</span> Async Generator Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-asyncgenerator-definitions-propertydefinitionevaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.4.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-class-definitions" title="Class Definitions"><span class="secnum">4.5</span> Class Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-runtime-semantics-classdefinitionevaluation" title="Runtime Semantics: ClassDefinitionEvaluation"><span class="secnum">4.5.1</span> RS: ClassDefinitionEvaluation</a></li></ol></li><li><span class="item-toggle">◢</span><a href="#sec-async-function-definitions" title="Async Function Definitions"><span class="secnum">4.6</span> Async Function Definitions</a><ol class="toc"><li><span class="item-toggle-none"></span><a href="#sec-async-function-definitions-PropertyDefinitionEvaluation" title="Runtime Semantics: PropertyDefinitionEvaluation"><span class="secnum">4.6.1</span> RS: PropertyDefinitionEvaluation</a></li></ol></li></ol></li><li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li></ol></div></div><div id="spec-container"><h1 class="version first">Stage 1 Draft / September 8, 2020</h1><h1 class="title">ECMAScript 'class'-property access expressions</h1>
 
 <emu-intro id="sec-intro">
   <h1>Introduction</h1>
-  <emu-import href="sec-introduction.html"><p>This proposal defines new syntax to access static members of the containing lexical <code>class</code> declaration.</p>
-<p>See  <a href="https://github.com/rbuckton/proposal-class-access-expressions">the proposal repository</a> for background material and discussion.</p></emu-import>
+  <emu-import href="sec-introduction.html"><p>This proposal defines new syntax to access static members of the containing lexical <code>class</code> declaration.</p><p>See <a href="https://github.com/rbuckton/proposal-class-access-expressions">the proposal repository</a> for background material and discussion.</p></emu-import>
 </emu-intro>
 
 <emu-clause id="sec-executable-code-and-execution-contexts">
-  <h1><span class="secnum">1</span>Executable Code and Execution Contexts</h1>
+  <h1><span class="secnum">1</span> Executable Code and Execution Contexts</h1>
   <emu-clause id="sec-environment-records">
-    <h1><span class="secnum">1.1</span>Environment Records</h1>
+    <h1><span class="secnum">1.1</span> Environment Records</h1>
     <emu-import href="sec-the-environment-record-type-hierarchy-patch.html"><emu-clause id="sec-the-environment-record-type-hierarchy">
-  <h1><span class="secnum">1.1.1</span>The Environment Record Type Hierarchy</h1>
+  <h1><span class="secnum">1.1.1</span> The Environment Record Type Hierarchy</h1>
 
-  <p>The <emu-xref href="#sec-environment-records" id="_ref_5"><a href="#sec-environment-records">Environment Record</a></emu-xref> abstract class includes the abstract specification methods defined in  <emu-xref href="#table-abstract-methods-of-environment-records" id="_ref_0"><a href="#table-abstract-methods-of-environment-records">Table 1</a></emu-xref>. These abstract methods have distinct concrete algorithms for each of the concrete subclasses.</p>
-  <emu-table id="table-abstract-methods-of-environment-records" caption="Abstract Methods of Environment Records" oldids="table-15"><figure><figcaption>Table 1: Abstract Methods of Environment Records</figcaption>
-    <span id="table-15"></span><table>
+  <p>The <emu-xref href="#sec-environment-records" id="_ref_5"><a href="#sec-environment-records">Environment Record</a></emu-xref> abstract class includes the abstract specification methods defined in <emu-xref href="#table-abstract-methods-of-environment-records" id="_ref_0"><a href="#table-abstract-methods-of-environment-records">Table 1</a></emu-xref>. These abstract methods have distinct concrete algorithms for each of the concrete subclasses.</p>
+  <emu-table id="table-abstract-methods-of-environment-records" caption="Abstract Methods of Environment Records" oldids="table-15"><figure><figcaption>Table 1: Abstract Methods of Environment Records</figcaption><span id="table-15"></span>
+    <table>
       <tbody>
       <tr>
         <th>
           Method
-        
         </th>
         <th>
           Purpose
-        
         </th>
       </tr>
       <tr>
         <td>
           HasBinding(N)
-        
         </td>
         <td>
           Determine if an <emu-xref href="#sec-environment-records" id="_ref_6"><a href="#sec-environment-records">Environment Record</a></emu-xref> has a binding for the String value <var>N</var>. Return <emu-val>true</emu-val> if it does and <emu-val>false</emu-val> if it does not.
-        
         </td>
       </tr>
       <tr>
         <td>
           CreateMutableBinding(N, D)
-        
         </td>
         <td>
           Create a new but uninitialized mutable binding in an <emu-xref href="#sec-environment-records" id="_ref_7"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. If the Boolean argument <var>D</var> is <emu-val>true</emu-val> the binding may be subsequently deleted.
-        
         </td>
       </tr>
       <tr>
         <td>
           CreateImmutableBinding(N, S)
-        
         </td>
         <td>
           Create a new but uninitialized immutable binding in an <emu-xref href="#sec-environment-records" id="_ref_8"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. If <var>S</var> is <emu-val>true</emu-val> then attempts to set it after it has been initialized will always throw an exception, regardless of the strict mode setting of operations that reference that binding.
-        
         </td>
       </tr>
       <tr>
         <td>
           InitializeBinding(N, V)
-        
         </td>
         <td>
-          Set the value of an already existing but uninitialized binding in an <emu-xref href="#sec-environment-records" id="_ref_9"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>V</var> is the value for the binding and is a value of any <emu-xref href="#sec-ecmascript-language-types"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types">ECMAScript language type</a></emu-xref>.
-        
+          Set the value of an already existing but uninitialized binding in an <emu-xref href="#sec-environment-records" id="_ref_9"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>V</var> is the value for the binding and is a value of any <emu-xref href="#sec-ecmascript-language-types"><a href="https://tc39.es/ecma262/#sec-ecmascript-language-types">ECMAScript language type</a></emu-xref>.
         </td>
       </tr>
       <tr>
         <td>
           SetMutableBinding(N, V, S)
-        
         </td>
         <td>
-          Set the value of an already existing mutable binding in an <emu-xref href="#sec-environment-records" id="_ref_10"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>V</var> is the value for the binding and may be a value of any <emu-xref href="#sec-ecmascript-language-types"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types">ECMAScript language type</a></emu-xref>. <var>S</var> is a Boolean flag. If <var>S</var> is <emu-val>true</emu-val> and the binding cannot be set throw a <emu-val>TypeError</emu-val> exception.
-        
+          Set the value of an already existing mutable binding in an <emu-xref href="#sec-environment-records" id="_ref_10"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>V</var> is the value for the binding and may be a value of any <emu-xref href="#sec-ecmascript-language-types"><a href="https://tc39.es/ecma262/#sec-ecmascript-language-types">ECMAScript language type</a></emu-xref>. <var>S</var> is a Boolean flag. If <var>S</var> is <emu-val>true</emu-val> and the binding cannot be set throw a <emu-val>TypeError</emu-val> exception.
         </td>
       </tr>
       <tr>
         <td>
           GetBindingValue(N, S)
-        
         </td>
         <td>
-          Returns the value of an already existing binding from an <emu-xref href="#sec-environment-records" id="_ref_11"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>S</var> is used to identify references originating in <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.github.io/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> or that otherwise require strict mode reference semantics. If <var>S</var> is <emu-val>true</emu-val> and the binding does not exist throw a <emu-val>ReferenceError</emu-val> exception. If the binding exists but is uninitialized a <emu-val>ReferenceError</emu-val> is thrown, regardless of the value of <var>S</var>.
-        
+          Returns the value of an already existing binding from an <emu-xref href="#sec-environment-records" id="_ref_11"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. <var>S</var> is used to identify references originating in <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.es/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> or that otherwise require strict mode reference semantics. If <var>S</var> is <emu-val>true</emu-val> and the binding does not exist throw a <emu-val>ReferenceError</emu-val> exception. If the binding exists but is uninitialized a <emu-val>ReferenceError</emu-val> is thrown, regardless of the value of <var>S</var>.
         </td>
       </tr>
       <tr>
         <td>
           DeleteBinding(N)
-        
         </td>
         <td>
           Delete a binding from an <emu-xref href="#sec-environment-records" id="_ref_12"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The String value <var>N</var> is the text of the bound name. If a binding for <var>N</var> exists, remove the binding and return <emu-val>true</emu-val>. If the binding exists but cannot be removed return <emu-val>false</emu-val>. If the binding does not exist return <emu-val>true</emu-val>.
-        
         </td>
       </tr>
       <tr>
         <td>
           HasThisBinding()
-        
         </td>
         <td>
           Determine if an <emu-xref href="#sec-environment-records" id="_ref_13"><a href="#sec-environment-records">Environment Record</a></emu-xref> establishes a <code>this</code> binding. Return <emu-val>true</emu-val> if it does and <emu-val>false</emu-val> if it does not.
-        
         </td>
       </tr>
       <tr>
         <td>
           HasSuperBinding()
-        
         </td>
         <td>
           Determine if an <emu-xref href="#sec-environment-records" id="_ref_14"><a href="#sec-environment-records">Environment Record</a></emu-xref> establishes a <code>super</code> method binding. Return <emu-val>true</emu-val> if it does and <emu-val>false</emu-val> if it does not.
-        
         </td>
       </tr>
       <tr>
@@ -1934,173 +1953,144 @@ li.menu-search-result-term:before {
       <tr>
         <td>
           WithBaseObject()
-        
         </td>
         <td>
           If this <emu-xref href="#sec-environment-records" id="_ref_16"><a href="#sec-environment-records">Environment Record</a></emu-xref> is associated with a <code>with</code> statement, return the with object. Otherwise, return <emu-val>undefined</emu-val>.
-        
         </td>
       </tr>
       </tbody>
     </table>
   </figure></emu-table>
   <emu-import href="sec-declarative-environment-records-patch.html"><emu-clause id="sec-declarative-environment-records">
-  <h1><span class="secnum">1.1.1.1</span>Declarative Environment Records</h1>
+  <h1><span class="secnum">1.1.1.1</span> Declarative Environment Records</h1>
 
   <emu-clause id="sec-declarative-environment-records-hasclassbinding">
-    <h1><span class="secnum">1.1.1.1.1</span><ins>HasClassBinding ( )</ins></h1>
+    <h1><span class="secnum">1.1.1.1.1</span> <ins>HasClassBinding ( )</ins></h1>
     <p>Regular declarative Environment Records do not provide a <code>class</code> binding.</p>
-    <emu-alg><ol><li>Return <emu-val>false</emu-val>.
-    </li></ol></emu-alg>
+    <emu-alg><ol><li>Return <emu-val>false</emu-val>.</li></ol></emu-alg>
   </emu-clause>
 </emu-clause></emu-import>
-  <emu-import href="sec-function-environment-records-patch.html"><emu-clause id="sec-function-environment-records" oldids="function-environment">
-  <span id="function-environment"></span><h1><span class="secnum">1.1.1.2</span>Function Environment Records</h1>
-  <p>A  <dfn>function Environment Record</dfn> is a declarative <emu-xref href="#sec-environment-records" id="_ref_17"><a href="#sec-environment-records">Environment Record</a></emu-xref> that is used to represent the top-level scope of a function and, if the function is not an <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ArrowFunction">ArrowFunction</a></emu-nt>, provides a <code>this</code> binding. If a function is not an <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ArrowFunction">ArrowFunction</a></emu-nt> function and references <code>super</code>, its function Environment Record also contains the state that is used to perform <code>super</code> method invocations from within the function.</p>
-  <p>Function Environment Records have the additional state fields listed in  <emu-xref href="#table-additional-fields-of-function-environment-records" id="_ref_1"><a href="#table-additional-fields-of-function-environment-records">Table 2</a></emu-xref>.</p>
-  <emu-table id="table-additional-fields-of-function-environment-records" caption="Additional Fields of Function Environment Records" oldids="table-16"><figure><figcaption>Table 2: Additional Fields of Function Environment Records</figcaption>
-    <span id="table-16"></span><table>
+  <emu-import href="sec-function-environment-records-patch.html"><emu-clause id="sec-function-environment-records" oldids="function-environment"><span id="function-environment"></span>
+  <h1><span class="secnum">1.1.1.2</span> Function Environment Records</h1>
+  <p>A <dfn>function Environment Record</dfn> is a declarative <emu-xref href="#sec-environment-records" id="_ref_17"><a href="#sec-environment-records">Environment Record</a></emu-xref> that is used to represent the top-level scope of a function and, if the function is not an <emu-nt><a href="https://tc39.es/ecma262/#prod-asi-rules-ArrowFunction">ArrowFunction</a></emu-nt>, provides a <code>this</code> binding. If a function is not an <emu-nt><a href="https://tc39.es/ecma262/#prod-asi-rules-ArrowFunction">ArrowFunction</a></emu-nt> function and references <code>super</code>, its function Environment Record also contains the state that is used to perform <code>super</code> method invocations from within the function.</p>
+  <p>Function Environment Records have the additional state fields listed in <emu-xref href="#table-additional-fields-of-function-environment-records" id="_ref_1"><a href="#table-additional-fields-of-function-environment-records">Table 2</a></emu-xref>.</p>
+  <emu-table id="table-additional-fields-of-function-environment-records" caption="Additional Fields of Function Environment Records" oldids="table-16"><figure><figcaption>Table 2: Additional Fields of Function Environment Records</figcaption><span id="table-16"></span>
+    <table>
       <tbody>
       <tr>
         <th>
           Field Name
-        
         </th>
         <th>
           Value
-        
         </th>
         <th>
           Meaning
-        
         </th>
       </tr>
       <tr>
         <td>
           [[ThisValue]]
-        
         </td>
         <td>
           Any
-        
         </td>
         <td>
           This is the <emu-val>this</emu-val> value used for this invocation of the function.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[ThisBindingStatus]]
-        
         </td>
         <td>
           <emu-const>lexical</emu-const> | <emu-const>initialized</emu-const> | <emu-const>uninitialized</emu-const>
-        
         </td>
         <td>
-          If the value is <emu-const>lexical</emu-const>, this is an <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ArrowFunction">ArrowFunction</a></emu-nt> and does not have a local <emu-val>this</emu-val> value.
-        
+          If the value is <emu-const>lexical</emu-const>, this is an <emu-nt><a href="https://tc39.es/ecma262/#prod-asi-rules-ArrowFunction">ArrowFunction</a></emu-nt> and does not have a local <emu-val>this</emu-val> value.
         </td>
       </tr>
       <tr>
         <td>
           [[FunctionObject]]
-        
         </td>
         <td>
           Object
-        
         </td>
         <td>
-          The function object whose invocation caused this <emu-xref href="#sec-environment-records" id="_ref_18"><a href="#sec-environment-records">Environment Record</a></emu-xref> to be created.
-        
+          The <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref> whose invocation caused this <emu-xref href="#sec-environment-records" id="_ref_18"><a href="#sec-environment-records">Environment Record</a></emu-xref> to be created.
         </td>
       </tr>
       <tr>
         <td>
           [[HomeObject]]
-        
         </td>
         <td>
           Object | <emu-val>undefined</emu-val>
-        
         </td>
         <td>
-          If the associated function has <code>super</code> property accesses and is not an <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ArrowFunction">ArrowFunction</a></emu-nt>, [[HomeObject]] is the object that the function is bound to as a method. The default value for [[HomeObject]] is <emu-val>undefined</emu-val>.
-        
+          If the associated function has <code>super</code> property accesses and is not an <emu-nt><a href="https://tc39.es/ecma262/#prod-asi-rules-ArrowFunction">ArrowFunction</a></emu-nt>, [[HomeObject]] is the object that the function is bound to as a method. The default value for [[HomeObject]] is <emu-val>undefined</emu-val>.
         </td>
       </tr>
       <tr>
         <td>
-          <ins>[[ClassObject]]</ins>
+          <ins>[[InitialClassObject]]</ins>
         </td>
         <td>
           <ins>Object | <emu-val>undefined</emu-val></ins>
         </td>
         <td>
-          <ins>If the associated function has class property access and is not an <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ArrowFunction">ArrowFunction</a></emu-nt>, [[ClassObject]] is the class that the function is bound to as a method. The default value for [[ClassObject]] is <emu-val>undefined</emu-val>.</ins>
+          <ins>If the associated function has class property access and is not an <emu-nt><a href="https://tc39.es/ecma262/#prod-asi-rules-ArrowFunction">ArrowFunction</a></emu-nt>, [[InitialClassObject]] is the class that the function was initially bound to as a method. The default value for [[InitialClassObject]] is <emu-val>undefined</emu-val>.</ins>
         </td>
       </tr>
       <tr>
         <td>
           [[NewTarget]]
-        
         </td>
         <td>
           Object | <emu-val>undefined</emu-val>
-        
         </td>
         <td>
           If this <emu-xref href="#sec-environment-records" id="_ref_19"><a href="#sec-environment-records">Environment Record</a></emu-xref> was created by the [[Construct]] internal method, [[NewTarget]] is the value of the [[Construct]] <var>newTarget</var> parameter. Otherwise, its value is <emu-val>undefined</emu-val>.
-        
         </td>
       </tr>
       </tbody>
     </table>
   </figure></emu-table>
-  <p>Function Environment Records support all of the declarative <emu-xref href="#sec-environment-records" id="_ref_20"><a href="#sec-environment-records">Environment Record</a></emu-xref> methods listed in  <emu-xref href="#table-abstract-methods-of-environment-records" id="_ref_2"><a href="#table-abstract-methods-of-environment-records">Table 1</a></emu-xref> and share the same specifications for all of those methods except for HasThisBinding<del> and HasSuperBinding</del><ins>, HasSuperBinding, and HasClassBinding</ins>. In addition, function Environment Records support the methods listed in  <emu-xref href="#table-additional-methods-of-function-environment-records" id="_ref_3"><a href="#table-additional-methods-of-function-environment-records">Table 3</a></emu-xref>:</p>
-  <emu-table id="table-additional-methods-of-function-environment-records" caption="Additional Methods of Function Environment Records" oldids="table-17"><figure><figcaption>Table 3: Additional Methods of Function Environment Records</figcaption>
-    <span id="table-17"></span><table>
+  <p>Function Environment Records support all of the declarative <emu-xref href="#sec-environment-records" id="_ref_20"><a href="#sec-environment-records">Environment Record</a></emu-xref> methods listed in <emu-xref href="#table-abstract-methods-of-environment-records" id="_ref_2"><a href="#table-abstract-methods-of-environment-records">Table 1</a></emu-xref> and share the same specifications for all of those methods except for HasThisBinding<del> and HasSuperBinding</del><ins>, HasSuperBinding, and HasClassBinding</ins>. In addition, function Environment Records support the methods listed in <emu-xref href="#table-additional-methods-of-function-environment-records" id="_ref_3"><a href="#table-additional-methods-of-function-environment-records">Table 3</a></emu-xref>:</p>
+  <emu-table id="table-additional-methods-of-function-environment-records" caption="Additional Methods of Function Environment Records" oldids="table-17"><figure><figcaption>Table 3: Additional Methods of Function Environment Records</figcaption><span id="table-17"></span>
+    <table>
       <tbody>
       <tr>
         <th>
           Method
-        
         </th>
         <th>
           Purpose
-        
         </th>
       </tr>
       <tr>
         <td>
           BindThisValue(V)
-        
         </td>
         <td>
           Set the [[ThisValue]] and record that it has been initialized.
-        
         </td>
       </tr>
       <tr>
         <td>
           GetThisBinding()
-        
         </td>
         <td>
           Return the value of this <emu-xref href="#sec-environment-records" id="_ref_21"><a href="#sec-environment-records">Environment Record</a></emu-xref>'s <code>this</code> binding. Throws a <emu-val>ReferenceError</emu-val> if the <code>this</code> binding has not been initialized.
-        
         </td>
       </tr>
       <tr>
         <td>
           GetSuperBase()
-        
         </td>
         <td>
           Return the object that is the base for <code>super</code> property accesses bound in this <emu-xref href="#sec-environment-records" id="_ref_22"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The object is derived from this <emu-xref href="#sec-environment-records" id="_ref_23"><a href="#sec-environment-records">Environment Record</a></emu-xref>'s [[HomeObject]] field. The value <emu-val>undefined</emu-val> indicates that <code>super</code> property accesses will produce runtime errors.
-        
         </td>
       </tr>
       <tr>
@@ -2108,7 +2098,7 @@ li.menu-search-result-term:before {
           <ins>GetClassBinding()</ins>
         </td>
         <td>
-          <ins>Return the object that is the base for <code>class</code> property accesses bound in this <emu-xref href="#sec-environment-records" id="_ref_24"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The object is derived from this <emu-xref href="#sec-environment-records" id="_ref_25"><a href="#sec-environment-records">Environment Record</a></emu-xref>'s [[ClassObject]] field. The value <emu-val>undefined</emu-val> indicates that <code>class</code> property accesses will produce runtime errors.</ins>
+          <ins>Return the object that is the base for <code>class</code> property accesses bound in this <emu-xref href="#sec-environment-records" id="_ref_24"><a href="#sec-environment-records">Environment Record</a></emu-xref>. The object is derived from this <emu-xref href="#sec-environment-records" id="_ref_25"><a href="#sec-environment-records">Environment Record</a></emu-xref>'s [[InitialClassObject]] field. The value <emu-val>undefined</emu-val> indicates that <code>class</code> property accesses will produce runtime errors.</ins>
         </td>
       </tr>
       </tbody>
@@ -2117,362 +2107,300 @@ li.menu-search-result-term:before {
   <p>The behaviour of the additional concrete specification methods for function Environment Records is defined by the following algorithms:</p>
 
   <emu-clause id="sec-function-environment-records-hasclassbinding">
-    <h1><span class="secnum">1.1.1.2.1</span><ins>HasClassBinding ( )</ins></h1>
-    <emu-alg><ol><li>Let <var>envRec</var> be the <emu-xref href="#sec-function-environment-records" id="_ref_26"><a href="#sec-function-environment-records">function Environment Record</a></emu-xref> for which the method was invoked.</li><li>If <var>envRec</var>.[[ThisBindingStatus]] is <emu-const>lexical</emu-const>, return <emu-val>false</emu-val>.</li><li>If <var>envRec</var>.[[ClassObject]] has the value <emu-val>undefined</emu-val>, return <emu-val>false</emu-val>; otherwise, return <emu-val>true</emu-val>.
-    </li></ol></emu-alg>
+    <h1><span class="secnum">1.1.1.2.1</span> <ins>HasClassBinding ( )</ins></h1>
+    <emu-alg><ol><li>Let <var>envRec</var> be the <emu-xref href="#sec-function-environment-records" id="_ref_26"><a href="#sec-function-environment-records">function Environment Record</a></emu-xref> for which the method was invoked.</li><li>If <var>envRec</var>.[[ThisBindingStatus]] is <emu-const>lexical</emu-const>, return <emu-val>false</emu-val>.</li><li>If <var>envRec</var>.[[InitialClassObject]] has the value <emu-val>undefined</emu-val>, return <emu-val>false</emu-val>; otherwise, return <emu-val>true</emu-val>.</li></ol></emu-alg>
   </emu-clause>
 
   <emu-clause id="sec-getclassbinding">
-    <h1><span class="secnum">1.1.1.2.2</span><ins>GetClassBinding ( )</ins></h1>
-    <emu-alg><ol><li>Let <var>envRec</var> be the <emu-xref href="#sec-function-environment-records" id="_ref_27"><a href="#sec-function-environment-records">function Environment Record</a></emu-xref> for which the method was invoked.</li><li>Let <var>classObject</var> be <var>envRec</var>.[[ClassObject]].</li><li>If <var>classObject</var> has the value <emu-val>undefined</emu-val>, return <emu-val>undefined</emu-val>.</li><li>Assert: <emu-xref aoid="Type" id="_ref_28"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>classObject</var>) is Object.</li><li>Return ? <var>classObject</var>.
-    </li></ol></emu-alg>
+    <h1><span class="secnum">1.1.1.2.2</span> <ins>GetClassBinding ( )</ins></h1>
+    <emu-alg><ol><li>Let <var>envRec</var> be the <emu-xref href="#sec-function-environment-records" id="_ref_27"><a href="#sec-function-environment-records">function Environment Record</a></emu-xref> for which the method was invoked.</li><li>Let <var>classObject</var> be <var>envRec</var>.[[InitialClassObject]].</li><li>If <var>classObject</var> has the value <emu-val>undefined</emu-val>, return <emu-val>undefined</emu-val>.</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <emu-xref aoid="Type" id="_ref_28"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>classObject</var>) is Object.</li><li>Return ? <var>classObject</var>.</li></ol></emu-alg>
   </emu-clause>
-</emu-clause>
-</emu-import>
+</emu-clause></emu-import>
 </emu-clause></emu-import>
   </emu-clause>
 </emu-clause>
 
 <emu-clause id="sec-ordinary-and-exotic-objects-behaviours">
-  <h1><span class="secnum">2</span>Ordinary and Exotic Object Behaviors</h1>
+  <h1><span class="secnum">2</span> Ordinary and Exotic Object Behaviors</h1>
   <emu-import href="sec-ecmascript-function-objects-patch.html"><emu-clause id="sec-ecmascript-function-objects">
-  <h1><span class="secnum">2.1</span>ECMAScript Function Objects</h1>
-  <p>ECMAScript function objects encapsulate parameterized ECMAScript code closed over a lexical environment and support the dynamic evaluation of that code. An ECMAScript function object is an ordinary object and has the same internal slots and the same internal methods as other ordinary objects. The code of an ECMAScript function object may be either <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.github.io/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> (<emu-xref href="#sec-strict-mode-code"><a href="https://tc39.github.io/ecma262/#sec-strict-mode-code">10.2.1</a></emu-xref>) or <emu-xref href="#non-strict-code"><a href="https://tc39.github.io/ecma262/#non-strict-code">non-strict code</a></emu-xref>. An ECMAScript function object whose code is <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.github.io/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> is called a  <dfn id="strict-function">strict function</dfn>. One whose code is not <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.github.io/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> is called a  <dfn id="non-strict-function">non-strict function</dfn>.</p>
-  <p>In addition to [[Extensible]] and [[Prototype]], ECMAScript function objects also have the internal slots listed in  <emu-xref href="#table-internal-slots-of-ecmascript-function-objects" id="_ref_4"><a href="#table-internal-slots-of-ecmascript-function-objects">Table 4</a></emu-xref>.</p>
-  <emu-table id="table-internal-slots-of-ecmascript-function-objects" caption="Internal Slots of ECMAScript Function Objects" oldids="table-27"><figure><figcaption>Table 4: Internal Slots of ECMAScript Function Objects</figcaption>
-    <span id="table-27"></span><table>
+  <h1><span class="secnum">2.1</span> ECMAScript Function Objects</h1>
+  <p>ECMAScript function objects encapsulate parameterized ECMAScript code closed over a lexical environment and support the dynamic evaluation of that code. An ECMAScript <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref> is an ordinary object and has the same internal slots and the same internal methods as other ordinary objects. The code of an ECMAScript <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref> may be either <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.es/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> (<emu-xref href="#sec-strict-mode-code"><a href="https://tc39.es/ecma262/#sec-strict-mode-code">10.2.1</a></emu-xref>) or <emu-xref href="#non-strict-code"><a href="https://tc39.es/ecma262/#non-strict-code">non-strict code</a></emu-xref>. An ECMAScript <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref> whose code is <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.es/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> is called a <dfn id="strict-function">strict function</dfn>. One whose code is not <emu-xref href="#sec-strict-mode-code"><a href="https://tc39.es/ecma262/#sec-strict-mode-code">strict mode code</a></emu-xref> is called a <dfn id="non-strict-function">non-strict function</dfn>.</p>
+  <p>In addition to [[Extensible]] and [[Prototype]], ECMAScript function objects also have the internal slots listed in <emu-xref href="#table-internal-slots-of-ecmascript-function-objects" id="_ref_4"><a href="#table-internal-slots-of-ecmascript-function-objects">Table 4</a></emu-xref>.</p>
+  <emu-table id="table-internal-slots-of-ecmascript-function-objects" caption="Internal Slots of ECMAScript Function Objects" oldids="table-27"><figure><figcaption>Table 4: Internal Slots of ECMAScript Function Objects</figcaption><span id="table-27"></span>
+    <table>
       <tbody>
       <tr>
         <th>
           Internal Slot
-        
         </th>
         <th>
           Type
-        
         </th>
         <th>
           Description
-        
         </th>
       </tr>
       <tr>
         <td>
           [[Environment]]
-        
         </td>
         <td>
           <emu-xref href="#sec-environment-records" id="_ref_29"><a href="#sec-environment-records">Environment Record</a></emu-xref>
-        
         </td>
         <td>
           The <emu-xref href="#sec-environment-records" id="_ref_30"><a href="#sec-environment-records">Environment Record</a></emu-xref> that the function was closed over. Used as the outer environment when evaluating the code of the function.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[FormalParameters]]
-        
         </td>
         <td>
-          Parse Node
-        
+          <emu-xref href="#sec-syntactic-grammar"><a href="https://tc39.es/ecma262/#sec-syntactic-grammar">Parse Node</a></emu-xref>
         </td>
         <td>
           The root parse node of the source text that defines the function's formal parameter list.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[ECMAScriptCode]]
-        
         </td>
         <td>
-          Parse Node
-        
+          <emu-xref href="#sec-syntactic-grammar"><a href="https://tc39.es/ecma262/#sec-syntactic-grammar">Parse Node</a></emu-xref>
         </td>
         <td>
           The root parse node of the source text that defines the function's body.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[ConstructorKind]]
-        
         </td>
         <td>
           <emu-const>base</emu-const> | <emu-const>derived</emu-const>
-        
         </td>
         <td>
-          Whether or not the function is a derived class constructor.
-        
+          Whether or not the function is a derived class <emu-xref href="#constructor"><a href="https://tc39.es/ecma262/#constructor">constructor</a></emu-xref>.
         </td>
       </tr>
       <tr>
         <td>
           [[Realm]]
-        
         </td>
         <td>
-          <emu-xref href="#realm-record"><a href="https://tc39.github.io/ecma262/#realm-record">Realm Record</a></emu-xref>
-        
+          <emu-xref href="#realm-record"><a href="https://tc39.es/ecma262/#realm-record">Realm Record</a></emu-xref>
         </td>
         <td>
-          The <emu-xref href="#realm"><a href="https://tc39.github.io/ecma262/#realm">realm</a></emu-xref> in which the function was created and which provides any intrinsic objects that are accessed when evaluating the function.
-        
+          The <emu-xref href="#realm"><a href="https://tc39.es/ecma262/#realm">realm</a></emu-xref> in which the function was created and which provides any intrinsic objects that are accessed when evaluating the function.
         </td>
       </tr>
       <tr>
         <td>
           [[ScriptOrModule]]
-        
         </td>
         <td>
-          <emu-xref href="#script-record"><a href="https://tc39.github.io/ecma262/#script-record">Script Record</a></emu-xref> or <emu-xref href="#sec-abstract-module-records"><a href="https://tc39.github.io/ecma262/#sec-abstract-module-records">Module Record</a></emu-xref>
-        
+          <emu-xref href="#script-record"><a href="https://tc39.es/ecma262/#script-record">Script Record</a></emu-xref> or <emu-xref href="#sec-abstract-module-records"><a href="https://tc39.es/ecma262/#sec-abstract-module-records">Module Record</a></emu-xref>
         </td>
         <td>
           The script or module in which the function was created.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[ThisMode]]
-        
         </td>
         <td>
           <emu-const>lexical</emu-const> | <emu-const>strict</emu-const> | <emu-const>global</emu-const>
-        
         </td>
         <td>
-          Defines how <code>this</code> references are interpreted within the formal parameters and code body of the function. <emu-const>lexical</emu-const> means that <code>this</code> refers to the <emu-val>this</emu-val> value of a lexically enclosing function. <emu-const>strict</emu-const> means that the <emu-val>this</emu-val> value is used exactly as provided by an invocation of the function. <emu-const>global</emu-const> means that a <emu-val>this</emu-val> value of <emu-val>undefined</emu-val> or <emu-val>null</emu-val> is interpreted as a reference to the <emu-xref href="#global-object"><a href="https://tc39.github.io/ecma262/#global-object">global object</a></emu-xref>, and any other <emu-val>this</emu-val> value is first passed to <emu-xref aoid="ToObject" id="_ref_31"><a href="https://tc39.github.io/ecma262/#sec-toobject">ToObject</a></emu-xref>.
-        
+          Defines how <code>this</code> references are interpreted within the formal parameters and code body of the function. <emu-const>lexical</emu-const> means that <code>this</code> refers to the <emu-val>this</emu-val> value of a lexically enclosing function. <emu-const>strict</emu-const> means that the <emu-val>this</emu-val> value is used exactly as provided by an invocation of the function. <emu-const>global</emu-const> means that a <emu-val>this</emu-val> value of <emu-val>undefined</emu-val> or <emu-val>null</emu-val> is interpreted as a reference to the <emu-xref href="#sec-global-object"><a href="https://tc39.es/ecma262/#sec-global-object">global object</a></emu-xref>, and any other <emu-val>this</emu-val> value is first passed to <emu-xref aoid="ToObject" id="_ref_31"><a href="https://tc39.es/ecma262/#sec-toobject">ToObject</a></emu-xref>.
         </td>
       </tr>
       <tr>
         <td>
           [[Strict]]
-        
         </td>
         <td>
           Boolean
-        
         </td>
         <td>
           <emu-val>true</emu-val> if this is a <emu-xref href="#strict-function" id="_ref_32"><a href="#strict-function">strict function</a></emu-xref>, <emu-val>false</emu-val> if this is a <emu-xref href="#non-strict-function" id="_ref_33"><a href="#non-strict-function">non-strict function</a></emu-xref>.
-        
         </td>
       </tr>
       <tr>
         <td>
           [[HomeObject]]
-        
         </td>
         <td>
           Object
-        
         </td>
         <td>
           If the function uses <code>super</code>, this is the object whose [[GetPrototypeOf]] provides the object where <code>super</code> property lookups begin.
-        
         </td>
       </tr>
       <tr>
         <td>
-          <ins>[[ClassObject]]</ins>
+          <ins>[[InitialClassObject]]</ins>
         </td>
         <td>
           <ins>Object | <emu-val>undefined</emu-val></ins>
         </td>
         <td>
-          <ins>If the function has <code>class</code> property access, this is the object where <code>class</code> property lookups begin.</ins>
+          <ins>If the function has <code>class</code> property access, this is the <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref> where <code>class</code> property lookups begin.</ins>
         </td>
       </tr>
       <tr>
         <td>
           [[SourceText]]
-        
         </td>
         <td>
           sequence of Unicode code points
-        
         </td>
         <td>
-          The  <emu-xref href="#sec-source-text"><a href="https://tc39.github.io/ecma262/#sec-source-text">source text</a></emu-xref> that defines the function.
-        
+          The <emu-xref href="#sec-source-text"><a href="https://tc39.es/ecma262/#sec-source-text">source text</a></emu-xref> that defines the function.
         </td>
       </tr>
       <tr>
         <td>
           [[IsClassConstructor]]
-        
         </td>
         <td>
           Boolean
-        
         </td>
         <td>
-          Indicates whether the function is a class constructor. (If <emu-val>true</emu-val>, invoking the function's [[Call]] will immediately throw a <emu-val>TypeError</emu-val> exception.)
-        
+          Indicates whether the function is a class <emu-xref href="#constructor"><a href="https://tc39.es/ecma262/#constructor">constructor</a></emu-xref>. (If <emu-val>true</emu-val>, invoking the function's [[Call]] will immediately throw a <emu-val>TypeError</emu-val> exception.)
         </td>
       </tr>
       </tbody>
     </table>
   </figure></emu-table>
   <emu-import href="sec-makemethod-patch.html"><emu-clause id="sec-makemethod" aoid="MakeMethod">
-  <h1><span class="secnum">2.1.1</span>MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )</h1>
+  <h1><span class="secnum">2.1.1</span> MakeMethod ( <var>F</var>, <var>homeObject</var><ins>, <var>classObject</var></ins> )</h1>
   <p>The abstract operation MakeMethod takes arguments <var>F</var><del> and <var>homeObject</var></del><ins>, <var>homeObject</var>, and <var>classObject</var></ins>. It configures <var>F</var> as a method. It performs the following steps when called:</p>
-  <emu-alg><ol><li>Assert: <var>F</var> is an ECMAScript function object.</li><li>Assert: <emu-xref aoid="Type" id="_ref_34"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>homeObject</var>) is Object.</li><li>Assert: <emu-xref aoid="Type" id="_ref_35"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>classObject</var>) is either Object or Undefined.</li><li>Set <var>F</var>.[[HomeObject]] to <var>homeObject</var>.</li><li><ins>Set <var>F</var>.[[ClassObject]] to <var>classObject</var>.</ins></li><li>Return <emu-xref aoid="NormalCompletion" id="_ref_36"><a href="https://tc39.github.io/ecma262/#sec-normalcompletion">NormalCompletion</a></emu-xref>(<emu-val>undefined</emu-val>).
-  </li></ol></emu-alg>
+  <emu-alg><ol><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <var>F</var> is an ECMAScript <emu-xref href="#function-object"><a href="https://tc39.es/ecma262/#function-object">function object</a></emu-xref>.</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <emu-xref aoid="Type" id="_ref_34"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>homeObject</var>) is Object.</li><li><emu-xref href="#assert"><a href="https://tc39.es/ecma262/#assert">Assert</a></emu-xref>: <emu-xref aoid="Type" id="_ref_35"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>classObject</var>) is either Object or Undefined.</li><li>Set <var>F</var>.[[HomeObject]] to <var>homeObject</var>.</li><li><ins>Set <var>F</var>.[[InitialClassObject]] to <var>classObject</var>.</ins></li><li>Return <emu-xref aoid="NormalCompletion" id="_ref_36"><a href="https://tc39.es/ecma262/#sec-normalcompletion">NormalCompletion</a></emu-xref>(<emu-val>undefined</emu-val>).</li></ol></emu-alg>
 </emu-clause></emu-import>
 </emu-clause></emu-import>
 </emu-clause>
 
 <emu-clause id="sec-ecmascript-language-expressions">
-  <h1><span class="secnum">3</span>ECMAScript Language: Expressions</h1>
+  <h1><span class="secnum">3</span> ECMAScript Language: Expressions</h1>
   <emu-clause id="sec-primary-expression">
-    <h1><span class="secnum">3.1</span>Primary Expression</h1>
+    <h1><span class="secnum">3.1</span> Primary Expression</h1>
     <emu-clause id="sec-object-initializer">
-      <h1><span class="secnum">3.1.1</span>Object Initializer</h1>
+      <h1><span class="secnum">3.1.1</span> Object Initializer</h1>
       <emu-import href="sec-object-initializer-runtime-semantics-propertydefinitionevaluation-patch.html"><emu-clause id="sec-object-initializer-runtime-semantics-propertydefinitionevaluation">
-  <h1><span class="secnum">3.1.1.1</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <h1><span class="secnum">3.1.1.1</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
 </emu-clause></emu-import>
     </emu-clause>
   </emu-clause>
   <emu-import href="sec-left-hand-side-expressions-patch.html"><emu-clause id="sec-left-hand-side-expressions">
-  <h1><span class="secnum">3.2</span>Left-Hand-Side Expressions</h1>
-  <emu-grammar><emu-production name="MemberExpression" params="Yield, Await" id="prod-MemberExpression">
-    <emu-nt params="Yield, Await"><a href="#prod-MemberExpression">MemberExpression</a><emu-mods><emu-params>[Yield, Await]</emu-params></emu-mods></emu-nt><emu-geq>:</emu-geq><emu-rhs a="669d9e8f"><emu-nt params="?Yield, ?Await"><a href="https://tc39.github.io/ecma262/#prod-PrimaryExpression">PrimaryExpression</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt></emu-rhs>
-    <emu-rhs a="46700b57"><emu-nt params="?Yield, ?Await" id="_ref_78"><a href="#prod-MemberExpression">MemberExpression</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-t>[</emu-t><emu-nt params="+In, ?Yield, ?Await"><a href="https://tc39.github.io/ecma262/#prod-Expression">Expression</a><emu-mods><emu-params>[+In, ?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-t>]</emu-t></emu-rhs>
-    <emu-rhs a="fea749a8"><emu-nt params="?Yield, ?Await" id="_ref_79"><a href="#prod-MemberExpression">MemberExpression</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-t>.</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
-    <emu-rhs a="e3a714cc"><emu-nt params="?Yield, ?Await" id="_ref_80"><a href="#prod-MemberExpression">MemberExpression</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-nt params="?Yield, ?Await, +Tagged"><a href="https://tc39.github.io/ecma262/#prod-TemplateLiteral">TemplateLiteral</a><emu-mods><emu-params>[?Yield, ?Await, +Tagged]</emu-params></emu-mods></emu-nt></emu-rhs>
-    <emu-rhs a="83d44750"><emu-nt params="?Yield, ?Await"><a href="https://tc39.github.io/ecma262/#prod-SuperProperty">SuperProperty</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt></emu-rhs>
-    <ins><emu-rhs a="fc7dfca2"><emu-nt params="?Yield, ?Await" id="_ref_81"><a href="#prod-ClassProperty">ClassProperty</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt></emu-rhs></ins>
-    <emu-rhs a="c81ee20f"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-MetaProperty">MetaProperty</a></emu-nt></emu-rhs>
-    <emu-rhs a="b8554289"><emu-t>new</emu-t><emu-nt params="?Yield, ?Await" id="_ref_82"><a href="#prod-MemberExpression">MemberExpression</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-nt params="?Yield, ?Await"><a href="https://tc39.github.io/ecma262/#prod-Arguments">Arguments</a><emu-mods><emu-params>[?Yield, ?Await]</emu-params></emu-mods></emu-nt></emu-rhs>
-</emu-production>
-<ins><emu-production name="ClassProperty" params="Yield, Await" id="prod-ClassProperty">
-    <emu-nt params="Yield, Await"><a href="#prod-ClassProperty">ClassProperty</a><emu-mods><emu-params>[Yield, Await]</emu-params></emu-mods></emu-nt><emu-geq>:</emu-geq><emu-rhs a="96746c4f"><emu-t>class</emu-t><emu-t>[</emu-t><emu-nt params="+In, ?Yield, ?Await"><a href="https://tc39.github.io/ecma262/#prod-Expression">Expression</a><emu-mods><emu-params>[+In, ?Yield, ?Await]</emu-params></emu-mods></emu-nt><emu-t>]</emu-t></emu-rhs>
-    <emu-rhs a="2a033436"><emu-t>class</emu-t><emu-t>.</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-IdentifierName">IdentifierName</a></emu-nt></emu-rhs>
-    <emu-rhs a="b37d83f7"><emu-t>class</emu-t><emu-t>.</emu-t><emu-nt>PrivateIdentifier</emu-nt></emu-rhs>
-</emu-production></ins></emu-grammar>
+  <h1><span class="secnum">3.2</span> Left-Hand-Side Expressions</h1>
+  <emu-grammar><emu-production name="ibs" collapsed="" id="prod-ibs">
+    <emu-nt><a href="#prod-ibs">ibs</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="c9addaa4"><emu-nt>highlight</emu-nt></emu-rhs>
+</emu-production></emu-grammar>
   <emu-include href="sec-class-keyword-patch.html"></emu-include>
-</emu-clause>
-</emu-import>
+</emu-clause></emu-import>
 </emu-clause>
 
 <emu-clause id="sec-ecmascript-language-functions-and-classes">
-  <h1><span class="secnum">4</span>ECMAScript Language: Functions and Classes</h1>
+  <h1><span class="secnum">4</span> ECMAScript Language: Functions and Classes</h1>
   <emu-clause id="sec-method-definitions">
-    <h1><span class="secnum">4.1</span>Method Definitions</h1>
+    <h1><span class="secnum">4.1</span> Method Definitions</h1>
     <emu-import href="sec-runtime-semantics-definemethod-patch.html"><emu-clause id="sec-runtime-semantics-definemethod">
-  <h1><span class="secnum">4.1.1</span>Runtime Semantics: DefineMethod</h1>
-  <p>With parameter <var>object</var> and optional  <del>parameter <var>functionPrototype</var></del><ins>parameters <var>functionPrototype</var> and <var>classObject</var></ins>.</p>
-  <emu-grammar><emu-production name="MethodDefinition" collapsed="" id="prod-MethodDefinition">
-    <emu-nt><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="cb8e53e9"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
+  <h1><span class="secnum">4.1.1</span> Runtime Semantics: DefineMethod</h1>
+  <p>With parameter <var>object</var> and optional <del>parameter <var>functionPrototype</var></del><ins>parameters <var>functionPrototype</var> and <var>classObject</var></ins>.</p>
+  <emu-grammar><emu-production name="pressions" id="prod-pressions">
+<emu-nt><a href="#prod-pressions">pressions</a></emu-nt><emu-geq>:</emu-geq></emu-production>
+<emu-production name="stage" collapsed="" id="prod-stage">
+    <emu-nt><a href="#prod-stage">stage</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="da39a3ee">[empty]</emu-rhs>
+</emu-production>
+<emu-production name="contributors" collapsed="" id="prod-contributors">
+    <emu-nt><a href="#prod-contributors">contributors</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="1561ad81"><emu-nt>Ron</emu-nt><emu-nt>Buckton</emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_37"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>If <var>functionPrototype</var> is present, then<ol><li>Let <var>prototype</var> be <var>functionPrototype</var>.</li></ol></li><li>Else,<ol><li>Let <var>prototype</var> be %Function.prototype%.</li></ol></li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_83"><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>closure</var> be OrdinaryFunctionCreate(<var>prototype</var>, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_38"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Return the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> { [[Key]]: <var>propKey</var>, [[Closure]]: <var>closure</var> }.
-  </li></ol></emu-alg>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_37"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>If <var>functionPrototype</var> is present, then<ol><li>Let <var>prototype</var> be <var>functionPrototype</var>.</li></ol></li><li>Else,<ol><li>Let <var>prototype</var> be <emu-xref href="#sec-properties-of-the-function-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-function-prototype-object">%Function.prototype%</a></emu-xref>.</li></ol></li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>closure</var> be <emu-xref aoid="OrdinaryFunctionCreate" id="_ref_38"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(<var>prototype</var>, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_39"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Return the <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">Record</a></emu-xref> { [[Key]]: <var>propKey</var>, [[Closure]]: <var>closure</var> }.</li></ol></emu-alg>
 </emu-clause></emu-import>
     <emu-import href="sec-method-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"><emu-clause id="sec-method-definitions-runtime-semantics-propertydefinitionevaluation">
-  <h1><span class="secnum">4.1.2</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <h1><span class="secnum">4.1.2</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
   <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
-  <emu-grammar><emu-production name="MethodDefinition" collapsed="">
-    <emu-nt><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="cb8e53e9"><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
-</emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>methodDef</var> be ? DefineMethod of <emu-nt id="_ref_84"><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt> with <del>argument <var>object</var></del><ins>arguments <var>object</var>, <emu-val>undefined</emu-val>, and <var>classObject</var></ins>.</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_39"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>methodDef</var>.[[Closure]], <var>methodDef</var>.[[Key]]).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>methodDef</var>.[[Closure]], [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_40"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>methodDef</var>.[[Key]], <var>desc</var>).
-  </li></ol></emu-alg>
-  <emu-grammar><emu-production name="MethodDefinition" collapsed="">
-    <emu-nt><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="f1487956"><emu-t>get</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
-</emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_41"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_85"><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>formalParameterList</var> be an instance of the production <emu-grammar><emu-production name="FormalParameters" collapsed="" id="prod-FormalParameters" class=" inline">
+  <emu-grammar></emu-grammar>
+  <emu-alg><ol><li>Let <var>methodDef</var> be ? DefineMethod of <emu-nt><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a></emu-nt> with <del>argument <var>object</var></del><ins>arguments <var>object</var>, <emu-val>undefined</emu-val>, and <var>classObject</var></ins>.</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_40"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>methodDef</var>.[[Closure]], <var>methodDef</var>.[[Key]]).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>methodDef</var>.[[Closure]], [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_41"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>methodDef</var>.[[Key]], <var>desc</var>).</li></ol></emu-alg>
+  <emu-grammar></emu-grammar>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_42"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>formalParameterList</var> be an instance of the production <emu-grammar><emu-production name="FormalParameters" collapsed="" id="prod-FormalParameters" class=" inline">
     <emu-nt><a href="#prod-FormalParameters">FormalParameters</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="37b9c04c"><emu-gann>[empty]</emu-gann></emu-rhs>
-</emu-production></emu-grammar>.</li><li>Let <var>closure</var> be OrdinaryFunctionCreate(%Function.prototype%, <var>sourceText</var>, <var>formalParameterList</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_42"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_43"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>, <emu-val>"get"</emu-val>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Get]]: <var>closure</var>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_44"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
-  <emu-grammar><emu-production name="MethodDefinition" collapsed="">
-    <emu-nt><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="4402354c"><emu-t>set</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertySetParameterList">PropertySetParameterList</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
-</emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_45"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_86"><a href="#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>closure</var> be OrdinaryFunctionCreate(%Function.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertySetParameterList">PropertySetParameterList</a></emu-nt>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_46"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_47"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>, <emu-val>"set"</emu-val>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Set]]: <var>closure</var>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_48"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
-</emu-clause>
-</emu-import>
-  </emu-clause>
-  <emu-clause id="sec-generator-function-definitions">
-    <h1><span class="secnum">4.2</span>Generator Function Definitions</h1>
-    <emu-import href="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"><emu-clause id="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation">
-  <h1><span class="secnum">4.2.1</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
-  <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
-  <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
-  <emu-grammar><emu-production name="GeneratorMethod" collapsed="" id="prod-GeneratorMethod">
-    <emu-nt><a href="#prod-GeneratorMethod">GeneratorMethod</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="c5c757ac"><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
-</emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_49"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_87"><a href="#prod-GeneratorMethod">GeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be OrdinaryFunctionCreate(%GeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_50"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_51"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%GeneratorFunction.prototype.prototype%).</li><li>Perform <emu-xref aoid="DefinePropertyOrThrow" id="_ref_52"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_53"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
+</emu-production></emu-grammar>.</li><li>Let <var>closure</var> be <emu-xref aoid="OrdinaryFunctionCreate" id="_ref_43"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(<emu-xref href="#sec-properties-of-the-function-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-function-prototype-object">%Function.prototype%</a></emu-xref>, <var>sourceText</var>, <var>formalParameterList</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_44"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_45"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>, <emu-val>"get"</emu-val>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Get]]: <var>closure</var>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_46"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
+  <emu-grammar></emu-grammar>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_47"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a></emu-nt>.</li><li>Let <var>closure</var> be <emu-xref aoid="OrdinaryFunctionCreate" id="_ref_48"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(<emu-xref href="#sec-properties-of-the-function-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-function-prototype-object">%Function.prototype%</a></emu-xref>, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertySetParameterList">PropertySetParameterList</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-FunctionBody">FunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_49"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_50"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>, <emu-val>"set"</emu-val>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Set]]: <var>closure</var>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_51"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
 </emu-clause></emu-import>
   </emu-clause>
   <emu-clause id="sec-generator-function-definitions">
-    <h1><span class="secnum">4.3</span>Generator Function Definitions</h1>
+    <h1><span class="secnum">4.2</span> Generator Function Definitions</h1>
     <emu-import href="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"><emu-clause id="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation">
-  <h1><span class="secnum">4.3.1</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <h1><span class="secnum">4.2.1</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
   <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
-  <emu-grammar><emu-production name="GeneratorMethod" collapsed="">
-    <emu-nt><a href="#prod-GeneratorMethod">GeneratorMethod</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="c5c757ac"><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
+  <emu-grammar><emu-production name="ction" collapsed="" id="prod-ction">
+    <emu-nt><a href="#prod-ction">ction</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="da39a3ee">[empty]</emu-rhs>
 </emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_54"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_88"><a href="#prod-GeneratorMethod">GeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be OrdinaryFunctionCreate(%GeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_55"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_56"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%GeneratorFunction.prototype.prototype%).</li><li>Perform <emu-xref aoid="DefinePropertyOrThrow" id="_ref_57"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_58"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_52"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-GeneratorMethod">GeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be <emu-xref aoid="OrdinaryFunctionCreate" id="_ref_53"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(%GeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_54"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_55"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%GeneratorFunction.prototype.prototype%).</li><li>Perform <emu-xref aoid="DefinePropertyOrThrow" id="_ref_56"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_57"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
+</emu-clause></emu-import>
+  </emu-clause>
+  <emu-clause id="sec-generator-function-definitions">
+    <h1><span class="secnum">4.3</span> Generator Function Definitions</h1>
+    <emu-import href="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation-patch.html"><emu-clause id="sec-generator-function-definitions-runtime-semantics-propertydefinitionevaluation">
+  <h1><span class="secnum">4.3.1</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
+  <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
+  <emu-grammar><emu-production name="ction" collapsed="">
+    <emu-nt><a href="#prod-ction">ction</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="da39a3ee">[empty]</emu-rhs>
+</emu-production></emu-grammar>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_58"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-GeneratorMethod">GeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be <emu-xref aoid="OrdinaryFunctionCreate" id="_ref_59"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(%GeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-GeneratorBody">GeneratorBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform <emu-xref aoid="MakeMethod" id="_ref_60"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_61"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%GeneratorFunction.prototype.prototype%).</li><li>Perform <emu-xref aoid="DefinePropertyOrThrow" id="_ref_62"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_63"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
 </emu-clause></emu-import>
   </emu-clause>
   <emu-clause id="sec-asyncgenerator-function-definitions">
-    <h1><span class="secnum">4.4</span>Async Generator Function Definitions</h1>
+    <h1><span class="secnum">4.4</span> Async Generator Function Definitions</h1>
     <emu-import href="sec-asyncgenerator-definitions-propertydefinitionevaluation-patch.html"><emu-clause id="sec-asyncgenerator-definitions-propertydefinitionevaluation">
-  <h1><span class="secnum">4.4.1</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <h1><span class="secnum">4.4.1</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameter <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
-  <emu-grammar><emu-production name="AsyncGeneratorMethod" collapsed="" id="prod-AsyncGeneratorMethod">
-    <emu-nt><a href="#prod-AsyncGeneratorMethod">AsyncGeneratorMethod</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="be384400"><emu-t>async</emu-t><emu-t>*</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt>AsyncGeneratorBody</emu-nt><emu-t>}</emu-t></emu-rhs>
+  <emu-grammar><emu-production name="contributors" collapsed="">
+    <emu-nt><a href="#prod-contributors">contributors</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="1561ad81"><emu-nt>Ron</emu-nt><emu-nt>Buckton</emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_59"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_89"><a href="#prod-AsyncGeneratorMethod">AsyncGeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be !&nbsp;OrdinaryFunctionCreate(%AsyncGeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt>AsyncGeneratorBody</emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform !&nbsp;<emu-xref aoid="MakeMethod" id="_ref_60"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform !&nbsp;<emu-xref aoid="SetFunctionName" id="_ref_61"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%AsyncGeneratorFunction.prototype.prototype%).</li><li>Perform !&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_62"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_63"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_64"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-AsyncGeneratorMethod">AsyncGeneratorMethod</a></emu-nt>.</li><li>Let <var>closure</var> be !&nbsp;<emu-xref aoid="OrdinaryFunctionCreate" id="_ref_65"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(%AsyncGeneratorFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-AsyncGeneratorBody">AsyncGeneratorBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform !&nbsp;<emu-xref aoid="MakeMethod" id="_ref_66"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform !&nbsp;<emu-xref aoid="SetFunctionName" id="_ref_67"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>prototype</var> be !&nbsp;OrdinaryObjectCreate(%AsyncGeneratorFunction.prototype.prototype%).</li><li>Perform !&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_68"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>closure</var>, <emu-val>"prototype"</emu-val>, PropertyDescriptor { [[Value]]: <var>prototype</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <emu-val>false</emu-val>, [[Configurable]]: <emu-val>false</emu-val> }).</li><li>Let <var>desc</var> be PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_69"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
 </emu-clause></emu-import>
   </emu-clause>
   <emu-clause id="sec-class-definitions">
-    <h1><span class="secnum">4.5</span>Class Definitions</h1>
+    <h1><span class="secnum">4.5</span> Class Definitions</h1>
     <emu-import href="sec-runtime-semantics-classdefinitionevaluation-patch.html"><emu-clause id="sec-runtime-semantics-classdefinitionevaluation">
-  <h1><span class="secnum">4.5.1</span>Runtime Semantics: ClassDefinitionEvaluation</h1>
+  <h1><span class="secnum">4.5.1</span> Runtime Semantics: ClassDefinitionEvaluation</h1>
   <p>With parameters <var>classBinding</var> and <var>className</var>.</p>
-  <emu-grammar><emu-production name="ClassTail" collapsed="" id="prod-ClassTail">
-    <emu-nt><a href="#prod-ClassTail">ClassTail</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="b8ea6aa5"><emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt><emu-t>{</emu-t><emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassBody">ClassBody</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt><emu-t>}</emu-t></emu-rhs>
+  <emu-grammar><emu-production name="metadata" collapsed="" id="prod-metadata">
+    <emu-nt><a href="#prod-metadata">metadata</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="da39a3ee">[empty]</emu-rhs>
+</emu-production>
+<emu-production name="title" collapsed="" id="prod-title">
+    <emu-nt><a href="#prod-title">title</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="6d85b2d3"><emu-nt>ECMAScript</emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>env</var> be the LexicalEnvironment of the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>.</li><li>Let <var>classScope</var> be <emu-xref aoid="NewDeclarativeEnvironment" id="_ref_64"><a href="https://tc39.github.io/ecma262/#sec-newdeclarativeenvironment">NewDeclarativeEnvironment</a></emu-xref>(<var>env</var>).</li><li>If <var>classBinding</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform <var>classScope</var>.CreateImmutableBinding(<var>classBinding</var>, <emu-val>true</emu-val>).</li></ol></li><li>If <emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, then<ol><li>Let <var>protoParent</var> be %Object.prototype%.</li><li>Let <var>constructorParent</var> be %Function.prototype%.</li></ol></li><li>Else,<ol><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>classScope</var>.</li><li>Let <var>superclassRef</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ClassHeritage">ClassHeritage</a></emu-nt>.</li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>Let <var>superclass</var> be ?&nbsp;<emu-xref aoid="GetValue" id="_ref_65"><a href="https://tc39.github.io/ecma262/#sec-getvalue">GetValue</a></emu-xref>(<var>superclassRef</var>).</li><li>If <var>superclass</var> is <emu-val>null</emu-val>, then<ol><li>Let <var>protoParent</var> be <emu-val>null</emu-val>.</li><li>Let <var>constructorParent</var> be %Function.prototype%.</li></ol></li><li>Else if <emu-xref aoid="IsConstructor" id="_ref_66"><a href="https://tc39.github.io/ecma262/#sec-isconstructor">IsConstructor</a></emu-xref>(<var>superclass</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Else,<ol><li>Let <var>protoParent</var> be ?&nbsp;<emu-xref aoid="Get" id="_ref_67"><a href="https://tc39.github.io/ecma262/#sec-get-o-p">Get</a></emu-xref>(<var>superclass</var>, <emu-val>"prototype"</emu-val>).</li><li>If <emu-xref aoid="Type" id="_ref_68"><a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>protoParent</var>) is neither Object nor Null, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>constructorParent</var> be <var>superclass</var>.</li></ol></li></ol></li><li>Let <var>proto</var> be !&nbsp;OrdinaryObjectCreate(<var>protoParent</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassBody">ClassBody</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, let <var>constructor</var> be <emu-const>empty</emu-const>.</li><li>Else, let <var>constructor</var> be ConstructorMethod of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ClassBody">ClassBody</a></emu-nt>.</li><li>If <var>constructor</var> is <emu-const>empty</emu-const>, then<ol><li>If <emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is present, then<ol><li>Set <var>constructor</var> to the result of parsing the source text
+  <emu-alg><ol><li>Let <var>env</var> be the LexicalEnvironment of the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>.</li><li>Let <var>classScope</var> be <emu-xref aoid="NewDeclarativeEnvironment" id="_ref_70"><a href="https://tc39.es/ecma262/#sec-newdeclarativeenvironment">NewDeclarativeEnvironment</a></emu-xref>(<var>env</var>).</li><li>If <var>classBinding</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform <var>classScope</var>.CreateImmutableBinding(<var>classBinding</var>, <emu-val>true</emu-val>).</li></ol></li><li>If <emu-nt optional=""><a href="https://tc39.es/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, then<ol><li>Let <var>protoParent</var> be %Object.prototype%.</li><li>Let <var>constructorParent</var> be <emu-xref href="#sec-properties-of-the-function-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-function-prototype-object">%Function.prototype%</a></emu-xref>.</li></ol></li><li>Else,<ol><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>classScope</var>.</li><li>Let <var>superclassRef</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-ClassHeritage">ClassHeritage</a></emu-nt>.</li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>Let <var>superclass</var> be ?&nbsp;<emu-xref aoid="GetValue" id="_ref_71"><a href="https://tc39.es/ecma262/#sec-getvalue">GetValue</a></emu-xref>(<var>superclassRef</var>).</li><li>If <var>superclass</var> is <emu-val>null</emu-val>, then<ol><li>Let <var>protoParent</var> be <emu-val>null</emu-val>.</li><li>Let <var>constructorParent</var> be <emu-xref href="#sec-properties-of-the-function-prototype-object"><a href="https://tc39.es/ecma262/#sec-properties-of-the-function-prototype-object">%Function.prototype%</a></emu-xref>.</li></ol></li><li>Else if <emu-xref aoid="IsConstructor" id="_ref_72"><a href="https://tc39.es/ecma262/#sec-isconstructor">IsConstructor</a></emu-xref>(<var>superclass</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Else,<ol><li>Let <var>protoParent</var> be ?&nbsp;<emu-xref aoid="Get" id="_ref_73"><a href="https://tc39.es/ecma262/#sec-get-o-p">Get</a></emu-xref>(<var>superclass</var>, <emu-val>"prototype"</emu-val>).</li><li>If <emu-xref aoid="Type" id="_ref_74"><a href="https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values">Type</a></emu-xref>(<var>protoParent</var>) is neither Object nor Null, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>constructorParent</var> be <var>superclass</var>.</li></ol></li></ol></li><li>Let <var>proto</var> be !&nbsp;OrdinaryObjectCreate(<var>protoParent</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.es/ecma262/#prod-ClassBody">ClassBody</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, let <var>constructor</var> be <emu-const>empty</emu-const>.</li><li>Else, let <var>constructor</var> be ConstructorMethod of <emu-nt><a href="https://tc39.es/ecma262/#prod-ClassBody">ClassBody</a></emu-nt>.</li><li>If <var>constructor</var> is <emu-const>empty</emu-const>, then<ol><li>If <emu-nt optional=""><a href="https://tc39.es/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is present, then<ol><li>Set <var>constructor</var> to the result of parsing the source text
           <pre><code class="javascript hljs"><span class="hljs-keyword">constructor</span>(...args) { <span class="hljs-keyword">super</span>(...args); }</code></pre>
-          using the syntactic grammar with the <emu-xref href="#sec-context-free-grammars"><a href="https://tc39.github.io/ecma262/#sec-context-free-grammars">goal symbol</a></emu-xref> <emu-nt params="~Yield, ~Await" id="_ref_90"><a href="#prod-MethodDefinition">MethodDefinition</a><emu-mods><emu-params>[~Yield, ~Await]</emu-params></emu-mods></emu-nt>.</li></ol></li><li>Else,<ol><li>Set <var>constructor</var> to the result of parsing the source text
+          using the syntactic grammar with the <emu-xref href="#sec-context-free-grammars"><a href="https://tc39.es/ecma262/#sec-context-free-grammars">goal symbol</a></emu-xref> <emu-nt params="~Yield, ~Await"><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a><emu-mods><emu-params>[~Yield, ~Await]</emu-params></emu-mods></emu-nt>.</li></ol></li><li>Else,<ol><li>Set <var>constructor</var> to the result of parsing the source text
           <pre><code class="javascript hljs"><span class="hljs-keyword">constructor</span>() {}</code></pre>
-          using the syntactic grammar with the <emu-xref href="#sec-context-free-grammars"><a href="https://tc39.github.io/ecma262/#sec-context-free-grammars">goal symbol</a></emu-xref> <emu-nt params="~Yield, ~Await" id="_ref_91"><a href="#prod-MethodDefinition">MethodDefinition</a><emu-mods><emu-params>[~Yield, ~Await]</emu-params></emu-mods></emu-nt>.</li></ol></li></ol></li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>classScope</var>.</li><li>Let <var>constructorInfo</var> be ! DefineMethod of <var>constructor</var> with arguments <var>proto</var> and <var>constructorParent</var>.</li><li>Let <var>F</var> be <var>constructorInfo</var>.[[Closure]].</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_69"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>F</var>, <var>className</var>).</li><li>Perform <emu-xref aoid="MakeConstructor" id="_ref_70"><a href="https://tc39.github.io/ecma262/#sec-makeconstructor">MakeConstructor</a></emu-xref>(<var>F</var>, <emu-val>false</emu-val>, <var>proto</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is present, set <var>F</var>.[[ConstructorKind]] to <emu-const>derived</emu-const>.</li><li><ins>Set <var>F</var>.[[ClassObject]] to <var>F</var>.</ins></li><li>Perform <emu-xref aoid="MakeClassConstructor" id="_ref_71"><a href="https://tc39.github.io/ecma262/#sec-makeclassconstructor">MakeClassConstructor</a></emu-xref>(<var>F</var>).</li><li>Perform <emu-xref aoid="CreateMethodProperty" id="_ref_72"><a href="https://tc39.github.io/ecma262/#sec-createmethodproperty">CreateMethodProperty</a></emu-xref>(<var>proto</var>, <emu-val>"constructor"</emu-val>, <var>F</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.github.io/ecma262/#prod-ClassBody">ClassBody</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, let <var>methods</var> be a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.</li><li>Else, let <var>methods</var> be NonConstructorMethodDefinitions of <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ClassBody">ClassBody</a></emu-nt>.</li><li>For each <emu-nt><a href="https://tc39.github.io/ecma262/#prod-ClassElement">ClassElement</a></emu-nt> <var>m</var> of <var>methods</var>, do<ol><li>If IsStatic of <var>m</var> is <emu-val>false</emu-val>, then<ol><li>Let <var>status</var> be PropertyDefinitionEvaluation of <var>m</var> with arguments <var>proto</var><del> and <emu-val>false</emu-val></del><ins>, <emu-val>false</emu-val>, and <var>F</var></ins>.</li></ol></li><li>Else,<ol><li>Let <var>status</var> be PropertyDefinitionEvaluation of <var>m</var> with arguments <var>F</var><del> and <emu-val>false</emu-val></del><ins>, <emu-val>false</emu-val>, and <var>F</var></ins>.</li></ol></li><li>If <var>status</var> is an <emu-xref href="#sec-completion-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type">abrupt completion</a></emu-xref>, then<ol><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>Return <emu-xref aoid="Completion" id="_ref_73"><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type">Completion</a></emu-xref>(<var>status</var>).</li></ol></li></ol></li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>If <var>classBinding</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform <var>classScope</var>.InitializeBinding(<var>classBinding</var>, <var>F</var>).</li></ol></li><li>Return <var>F</var>.
-  </li></ol></emu-alg>
-</emu-clause>
-</emu-import>
+          using the syntactic grammar with the <emu-xref href="#sec-context-free-grammars"><a href="https://tc39.es/ecma262/#sec-context-free-grammars">goal symbol</a></emu-xref> <emu-nt params="~Yield, ~Await"><a href="https://tc39.es/ecma262/#prod-MethodDefinition">MethodDefinition</a><emu-mods><emu-params>[~Yield, ~Await]</emu-params></emu-mods></emu-nt>.</li></ol></li></ol></li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>classScope</var>.</li><li>Let <var>constructorInfo</var> be ! DefineMethod of <var>constructor</var> with arguments <var>proto</var> and <var>constructorParent</var>.</li><li>Let <var>F</var> be <var>constructorInfo</var>.[[Closure]].</li><li>Perform <emu-xref aoid="SetFunctionName" id="_ref_75"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>F</var>, <var>className</var>).</li><li>Perform <emu-xref aoid="MakeConstructor" id="_ref_76"><a href="https://tc39.es/ecma262/#sec-makeconstructor">MakeConstructor</a></emu-xref>(<var>F</var>, <emu-val>false</emu-val>, <var>proto</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.es/ecma262/#prod-ClassHeritage">ClassHeritage</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is present, set <var>F</var>.[[ConstructorKind]] to <emu-const>derived</emu-const>.</li><li><ins>Set <var>F</var>.[[InitialClassObject]] to <var>F</var>.</ins></li><li>Perform <emu-xref aoid="MakeClassConstructor" id="_ref_77"><a href="https://tc39.es/ecma262/#sec-makeclassconstructor">MakeClassConstructor</a></emu-xref>(<var>F</var>).</li><li>Perform <emu-xref aoid="CreateMethodProperty" id="_ref_78"><a href="https://tc39.es/ecma262/#sec-createmethodproperty">CreateMethodProperty</a></emu-xref>(<var>proto</var>, <emu-val>"constructor"</emu-val>, <var>F</var>).</li><li>If <emu-nt optional=""><a href="https://tc39.es/ecma262/#prod-ClassBody">ClassBody</a><emu-mods><emu-opt>opt</emu-opt></emu-mods></emu-nt> is not present, let <var>methods</var> be a new empty <emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.es/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref>.</li><li>Else, let <var>methods</var> be NonConstructorMethodDefinitions of <emu-nt><a href="https://tc39.es/ecma262/#prod-ClassBody">ClassBody</a></emu-nt>.</li><li>For each <emu-nt><a href="https://tc39.es/ecma262/#prod-ClassElement">ClassElement</a></emu-nt> <var>m</var> of <var>methods</var>, do<ol><li>If IsStatic of <var>m</var> is <emu-val>false</emu-val>, then<ol><li>Let <var>status</var> be PropertyDefinitionEvaluation of <var>m</var> with arguments <var>proto</var><del> and <emu-val>false</emu-val></del><ins>, <emu-val>false</emu-val>, and <var>F</var></ins>.</li></ol></li><li>Else,<ol><li>Let <var>status</var> be PropertyDefinitionEvaluation of <var>m</var> with arguments <var>F</var><del> and <emu-val>false</emu-val></del><ins>, <emu-val>false</emu-val>, and <var>F</var></ins>.</li></ol></li><li>If <var>status</var> is an <emu-xref href="#sec-completion-record-specification-type"><a href="https://tc39.es/ecma262/#sec-completion-record-specification-type">abrupt completion</a></emu-xref>, then<ol><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>Return <emu-xref aoid="Completion" id="_ref_79"><a href="https://tc39.es/ecma262/#sec-completion-record-specification-type">Completion</a></emu-xref>(<var>status</var>).</li></ol></li></ol></li><li>Set the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>'s LexicalEnvironment to <var>env</var>.</li><li>If <var>classBinding</var> is not <emu-val>undefined</emu-val>, then<ol><li>Perform <var>classScope</var>.InitializeBinding(<var>classBinding</var>, <var>F</var>).</li></ol></li><li>Return <var>F</var>.</li></ol></emu-alg>
+</emu-clause></emu-import>
   </emu-clause>
   <emu-clause id="sec-async-function-definitions">
-    <h1><span class="secnum">4.6</span>Async Function Definitions</h1>
+    <h1><span class="secnum">4.6</span> Async Function Definitions</h1>
     <emu-import href="sec-async-function-definitions-PropertyDefinitionEvaluation-patch.html"><emu-clause id="sec-async-function-definitions-PropertyDefinitionEvaluation">
-  <h1><span class="secnum">4.6.1</span>Runtime Semantics: PropertyDefinitionEvaluation</h1>
+  <h1><span class="secnum">4.6.1</span> Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameters <var>object</var><del> and <var>enumerable</var></del><ins>, <var>enumerable</var>, and optional parameter <var>classObject</var></ins>.</p>
-  <emu-grammar><emu-production name="AsyncMethod" collapsed="" id="prod-AsyncMethod">
-    <emu-nt><a href="#prod-AsyncMethod">AsyncMethod</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="759e5682"><emu-t>async</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt><emu-t>(</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt><emu-t>)</emu-t><emu-t>{</emu-t><emu-nt><a href="https://tc39.github.io/ecma262/#prod-AsyncFunctionBody">AsyncFunctionBody</a></emu-nt><emu-t>}</emu-t></emu-rhs>
+  <emu-grammar><emu-production name="contributors" collapsed="">
+    <emu-nt><a href="#prod-contributors">contributors</a></emu-nt><emu-geq>:</emu-geq><emu-rhs a="1561ad81"><emu-nt>Ron</emu-nt><emu-nt>Buckton</emu-nt></emu-rhs>
 </emu-production></emu-grammar>
-  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.github.io/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_74"><a href="https://tc39.github.io/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the LexicalEnvironment of the <emu-xref href="#running-execution-context"><a href="https://tc39.github.io/ecma262/#running-execution-context">running execution context</a></emu-xref>.</li><li>Let <var>sourceText</var> be the source text matched by <emu-nt id="_ref_92"><a href="#prod-AsyncMethod">AsyncMethod</a></emu-nt>.</li><li>Let <var>closure</var> be !&nbsp;OrdinaryFunctionCreate(%AsyncFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.github.io/ecma262/#prod-AsyncFunctionBody">AsyncFunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform !&nbsp;<emu-xref aoid="MakeMethod" id="_ref_75"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform !&nbsp;<emu-xref aoid="SetFunctionName" id="_ref_76"><a href="https://tc39.github.io/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_77"><a href="https://tc39.github.io/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).
-  </li></ol></emu-alg>
+  <emu-alg><ol><li>Let <var>propKey</var> be the result of evaluating <emu-nt><a href="https://tc39.es/ecma262/#prod-PropertyName">PropertyName</a></emu-nt>.</li><li><emu-xref aoid="ReturnIfAbrupt" id="_ref_80"><a href="https://tc39.es/ecma262/#sec-returnifabrupt">ReturnIfAbrupt</a></emu-xref>(<var>propKey</var>).</li><li>Let <var>scope</var> be the LexicalEnvironment of the <emu-xref href="#running-execution-context"><a href="https://tc39.es/ecma262/#running-execution-context">running execution context</a></emu-xref>.</li><li>Let <var>sourceText</var> be the <emu-xref href="#sec-algorithm-conventions-syntax-directed-operations"><a href="https://tc39.es/ecma262/#sec-algorithm-conventions-syntax-directed-operations">source text matched by</a></emu-xref> <emu-nt><a href="https://tc39.es/ecma262/#prod-AsyncMethod">AsyncMethod</a></emu-nt>.</li><li>Let <var>closure</var> be !&nbsp;<emu-xref aoid="OrdinaryFunctionCreate" id="_ref_81"><a href="https://tc39.es/ecma262/#sec-ordinaryfunctioncreate">OrdinaryFunctionCreate</a></emu-xref>(%AsyncFunction.prototype%, <var>sourceText</var>, <emu-nt><a href="https://tc39.es/ecma262/#prod-UniqueFormalParameters">UniqueFormalParameters</a></emu-nt>, <emu-nt><a href="https://tc39.es/ecma262/#prod-AsyncFunctionBody">AsyncFunctionBody</a></emu-nt>, <emu-const>non-lexical-this</emu-const>, <var>scope</var>).</li><li>Perform !&nbsp;<emu-xref aoid="MakeMethod" id="_ref_82"><a href="#sec-makemethod">MakeMethod</a></emu-xref>(<var>closure</var>, <var>object</var><ins>, <var>classObject</var></ins>).</li><li>Perform !&nbsp;<emu-xref aoid="SetFunctionName" id="_ref_83"><a href="https://tc39.es/ecma262/#sec-setfunctionname">SetFunctionName</a></emu-xref>(<var>closure</var>, <var>propKey</var>).</li><li>Let <var>desc</var> be the PropertyDescriptor { [[Value]]: <var>closure</var>, [[Writable]]: <emu-val>true</emu-val>, [[Enumerable]]: <var>enumerable</var>, [[Configurable]]: <emu-val>true</emu-val> }.</li><li>Return ?&nbsp;<emu-xref aoid="DefinePropertyOrThrow" id="_ref_84"><a href="https://tc39.es/ecma262/#sec-definepropertyorthrow">DefinePropertyOrThrow</a></emu-xref>(<var>object</var>, <var>propKey</var>, <var>desc</var>).</li></ol></emu-alg>
 </emu-clause></emu-import>
   </emu-clause>
 </emu-clause><emu-annex id="sec-copyright-and-software-license">
-      <h1><span class="secnum">A</span>Copyright &amp; Software License</h1>
+      <h1><span class="secnum">A</span> Copyright &amp; Software License</h1>
       
       <h2>Copyright Notice</h2>
       <p>© 2020 Ron Buckton, Ecma International</p>
