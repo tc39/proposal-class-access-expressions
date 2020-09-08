@@ -1,0 +1,10 @@
+<emu-clause id="sec-getclassenvironment" aoid="GetClassEnvironment">
+  <h1><ins>GetClassEnvironment ( )</ins></h1>
+  <p>The abstract operation GetClassEnvironment takes no arguments. It finds the Environment Record that currently supplies the binding of the keyword `class` for a |ClassProperty|. It performs the following steps when called:</p>
+  <emu-alg>
+    1. Let _env_ be GetThisEnvironment().
+    1. Let _exists_ be _env_.HasClassBinding().
+    1. If _exists_ is *true*, return _env_.
+    1. Return *undefined*.
+  </emu-alg>
+</emu-clause>

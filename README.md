@@ -160,6 +160,19 @@ class C {
   1. Let `fieldNameString` be the StringValue of _PrivateIdentifier_. 
   2. Let `bv` be the \[\[InitialClassObject]] of GetThisEnvironment().
   3. Return ?[MakePrivateReference](https://tc39.es/proposal-class-fields/#sec-makeprivatereference)( `bv`, `fieldNameString` )
+- `class` bindings are only available in the following declarations:
+  - A method of a class.
+  - An accessor of a class.
+  - A field initializer of a class.
+  - The constructor of a class.
+  - A class's `static` intialization block (see http://github.com/tc39/proposal-class-static-block)
+  - An *ArrowFunction* in any of these declarations.
+- `class` bindings are *not* valid in any of the following declarations:
+  - A *FunctionDeclaration* or *FunctionExpression*.
+  - A method of an object literal.
+  - An accessor of an object literal.
+  - Any execution context not nested within a lexical `class` declaration, including module or global scope.
+  - *NOTE:* This aligns with the behavior of `super`.
 
 <!--#endregion:semantics-->
 
@@ -273,6 +286,27 @@ let s = new Sub();
 b.h();                              // this: Base, class: Base
 s.h();                              // this: Sub, class: Base
 b.h.call({ name: "Other" });        // this: Other, class: Base
+```
+
+### Invalid usage
+
+```js
+class C {
+  static x = 1;
+  constructor() {
+    function f() {
+      return class.x; // function has no access to `class.`
+    }
+    f(); // throws TypeError
+
+    const obj = {
+      method() {
+        return class.x; // method of object literal has no access to `class`.
+      }
+    };
+    obj.method(); // throws TypeError
+  }
+}
 ```
 
 <!--#endregion:examples-->

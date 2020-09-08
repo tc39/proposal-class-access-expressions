@@ -1,12 +1,13 @@
 <emu-clause id="sec-class-keyword">
-  <h1>The `class` keyword</h1>
+  <h1><ins>The `class` keyword</ins></h1>
 
   <emu-clause id="sec-class-keyword-runtime-semantics-evaluation">
-    <h1>Runtime Semantics: Evaluation</h1>
+    <h1><ins>Runtime Semantics: Evaluation</ins></h1>
 
     <emu-grammar>ClassProperty : `class` `[` Expression `]`</emu-grammar>
     <emu-alg>
-      1. Let _env_ be GetThisEnvironment().
+      1. Let _env_ be GetClassEnvironment().
+      1. If _env_ is *undefined* throw a *TypeError* exception.
       1. Let _classObject_ be ? _env_.GetClassBinding().
       1. If _classObject_ is *undefined* throw a *TypeError* exception.
       1. If the code matched by this |ClassProperty| is strict mode code, let _strict_ be *true*; else let _strict_ be *false*.
@@ -15,7 +16,8 @@
 
     <emu-grammar>ClassProperty : `class` `.` IdentifierName</emu-grammar>
     <emu-alg>
-      1. Let _env_ be GetThisEnvironment().
+      1. Let _env_ be GetClassEnvironment().
+      1. If _env_ is *undefined* throw a *TypeError* exception.
       1. Let _classObject_ be ? _env_.GetClassBinding().
       1. If _classObject_ is *undefined* throw a *TypeError* exception.
       1. If the code matched by this |ClassProperty| is strict mode code, let _strict_ be *true*; else let _strict_ be *false*.
@@ -24,7 +26,8 @@
 
     <emu-grammar>ClassProperty : `class` `.` PrivateIdentifier</emu-grammar>
     <emu-alg>
-      1. Let _env_ be GetThisEnvironment().
+      1. Let _env_ be GetClassEnvironment().
+      1. If _env_ is *undefined* throw a *TypeError* exception.
       1. Let _classObject_ be ? _env_.GetClassBinding().
       1. If _classObject_ is *undefined* throw a *TypeError* exception.
       1. Return ? MakePrivateReference(_classObject_, |PrivateIdentifier|).

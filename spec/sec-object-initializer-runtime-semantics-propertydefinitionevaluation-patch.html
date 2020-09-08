@@ -1,4 +1,46 @@
 <emu-clause id="sec-object-initializer-runtime-semantics-propertydefinitionevaluation">
   <h1>Runtime Semantics: PropertyDefinitionEvaluation</h1>
   <p>With parameters _object_<del> and _enumerable_</del><ins>, _enumerable_, and optional parameter _classObject_</ins>.</p>
+  <emu-see-also-para op="PropertyDefinitionEvaluation"></emu-see-also-para>
+  <emu-grammar>PropertyDefinitionList : PropertyDefinitionList `,` PropertyDefinition</emu-grammar>
+  <emu-alg>
+    1. <ins>Assert: _classObject_ is not present or Type(_classObject_) is Undefined.</ins>
+    1. Perform ? PropertyDefinitionEvaluation of |PropertyDefinitionList| with arguments _object_ and _enumerable_.
+    1. Return the result of performing PropertyDefinitionEvaluation of |PropertyDefinition| with arguments _object_ and _enumerable_.
+  </emu-alg>
+  <emu-grammar>PropertyDefinition : `...` AssignmentExpression</emu-grammar>
+  <emu-alg>
+    1. <ins>Assert: _classObject_ is not present or Type(_classObject_) is Undefined.</ins>
+    1. Let _exprValue_ be the result of evaluating |AssignmentExpression|.
+    1. Let _fromValue_ be ? GetValue(_exprValue_).
+    1. Let _excludedNames_ be a new empty List.
+    1. Return ? CopyDataProperties(_object_, _fromValue_, _excludedNames_).
+  </emu-alg>
+  <emu-grammar>PropertyDefinition : IdentifierReference</emu-grammar>
+  <emu-alg>
+    1. <ins>Assert: _classObject_ is not present or Type(_classObject_) is Undefined.</ins>
+    1. Let _propName_ be StringValue of |IdentifierReference|.
+    1. Let _exprValue_ be the result of evaluating |IdentifierReference|.
+    1. Let _propValue_ be ? GetValue(_exprValue_).
+    1. Assert: _enumerable_ is *true*.
+    1. Assert: _object_ is an ordinary, extensible object with no non-configurable properties.
+    1. Return ! CreateDataPropertyOrThrow(_object_, _propName_, _propValue_).
+  </emu-alg>
+  <emu-grammar>PropertyDefinition : PropertyName `:` AssignmentExpression</emu-grammar>
+  <emu-alg>
+    1. <ins>Assert: _classObject_ is not present or Type(_classObject_) is Undefined.</ins>
+    1. Let _propKey_ be the result of evaluating |PropertyName|.
+    1. ReturnIfAbrupt(_propKey_).
+    1. If IsAnonymousFunctionDefinition(|AssignmentExpression|) is *true*, then
+      1. Let _propValue_ be NamedEvaluation of |AssignmentExpression| with argument _propKey_.
+    1. Else,
+      1. Let _exprValueRef_ be the result of evaluating |AssignmentExpression|.
+      1. Let _propValue_ be ? GetValue(_exprValueRef_).
+    1. Assert: _enumerable_ is *true*.
+    1. Assert: _object_ is an ordinary, extensible object with no non-configurable properties.
+    1. Return ! CreateDataPropertyOrThrow(_object_, _propKey_, _propValue_).
+  </emu-alg>
+  <emu-note>
+    <p>An alternative semantics for this production is given in <emu-xref href="#sec-__proto__-property-names-in-object-initializers"></emu-xref>.</p>
+  </emu-note>
 </emu-clause>

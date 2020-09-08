@@ -1,6 +1,6 @@
 <emu-clause id="sec-function-environment-records" oldids="function-environment">
   <h1>Function Environment Records</h1>
-  <p>A <dfn>function Environment Record</dfn> is a declarative Environment Record that is used to represent the top-level scope of a function and, if the function is not an |ArrowFunction|, provides a `this` binding. If a function is not an |ArrowFunction| function and references `super`, its function Environment Record also contains the state that is used to perform `super` method invocations from within the function.</p>
+  <p>A <dfn>function Environment Record</dfn> is a declarative Environment Record that is used to represent the top-level scope of a function and, if the function is not an |ArrowFunction|, provides a `this` binding. If a function is not an |ArrowFunction| function and references `super`, its function Environment Record also contains the state that is used to perform `super` method invocations from within the function.<ins> If a function is not an |ArrowFunction| function and references `class`, its function Environment Record also contains the state that is used to perform `class` property acccess from within the function.</ins></p>
   <p>Function Environment Records have the additional state fields listed in <emu-xref href="#table-additional-fields-of-function-environment-records"></emu-xref>.</p>
   <emu-table id="table-additional-fields-of-function-environment-records" caption="Additional Fields of Function Environment Records" oldids="table-16">
     <table>
@@ -68,7 +68,7 @@
           <ins>Object | *undefined*</ins>
         </td>
         <td>
-          <ins>If the associated function has class property access and is not an |ArrowFunction|, [[InitialClassObject]] is the class that the function was initially bound to as a method. The default value for [[InitialClassObject]] is *undefined*.</ins>
+          <ins>If the associated function has `class` property access and is not an |ArrowFunction|, [[InitialClassObject]] is the class constructor function object that the function was initially bound to as a method. The default value for [[InitialClassObject]] is *undefined*.</ins>
         </td>
       </tr>
       <tr>

@@ -1,0 +1,19 @@
+<emu-clause id="sec-newfunctionenvironment" aoid="NewFunctionEnvironment">
+  <h1>NewFunctionEnvironment ( _F_, _newTarget_ )</h1>
+  <p>The abstract operation NewFunctionEnvironment takes arguments _F_ and _newTarget_. It performs the following steps when called:</p>
+  <emu-alg>
+    1. Assert: _F_ is an ECMAScript function.
+    1. Assert: Type(_newTarget_) is Undefined or Object.
+    1. Let _env_ be a new function Environment Record containing no bindings.
+    1. Set _env_.[[FunctionObject]] to _F_.
+    1. If _F_.[[ThisMode]] is ~lexical~, set _env_.[[ThisBindingStatus]] to ~lexical~.
+    1. Else, set _env_.[[ThisBindingStatus]] to ~uninitialized~.
+    1. Let _home_ be _F_.[[HomeObject]].
+    1. Set _env_.[[HomeObject]] to _home_.
+    1. <ins>Let _classObject_ be _F_.[[InitialClassObject]].</ins>
+    1. <ins>Set _env_.[[InitialClassObject]] to _classObject_.</ins>
+    1. Set _env_.[[NewTarget]] to _newTarget_.
+    1. Set _env_.[[OuterEnv]] to _F_.[[Environment]].
+    1. Return _env_.
+  </emu-alg>
+</emu-clause>
