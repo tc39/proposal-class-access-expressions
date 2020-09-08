@@ -436,7 +436,7 @@ The following is a high-level list of tasks to progress through each stage of th
 
 ### Stage 2 Entrance Criteria
 
-* [ ] [Initial specification text][Specification].  
+* [x] [Initial specification text][Specification].  
 * [ ] [Transpiler support][Transpiler] (_Optional_).  
 
 ### Stage 3 Entrance Criteria
@@ -462,7 +462,7 @@ The following is a high-level list of tasks to progress through each stage of th
 [Prose]: #motivations
 [Examples]: #examples
 [API]: #api
-[Specification]: https://rbuckton.github.io/proposal-class-access-expressions
+[Specification]: https://tc39.es/proposal-class-access-expressions
 
 <!-- The following links should be supplied as the proposal advances: -->
 [Transpiler]: #todo
