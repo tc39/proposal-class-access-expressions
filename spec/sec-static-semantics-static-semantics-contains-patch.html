@@ -1,0 +1,34 @@
+<emu-clause id="sec-static-semantics-static-semantics-contains">
+  <h1>Static Semantics: Contains</h1>
+  <p>With parameter _symbol_.</p>
+  <emu-see-also-para op="Contains"></emu-see-also-para>
+  <emu-grammar>MemberExpression : MemberExpression `.` IdentifierName</emu-grammar>
+  <emu-alg>
+    1. If |MemberExpression| Contains _symbol_ is *true*, return *true*.
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar>SuperProperty : `super` `.` IdentifierName</emu-grammar>
+  <emu-alg>
+    1. If _symbol_ is the |ReservedWord| `super`, return *true*.
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar><ins>ClassProperty : `class` `.` IdentifierName</ins></emu-grammar>
+  <emu-alg>
+    1. If _symbol_ is the |ReservedWord| `class`, return *true*.
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar>CallExpression : CallExpression `.` IdentifierName</emu-grammar>
+  <emu-alg>
+    1. If |CallExpression| Contains _symbol_ is *true*, return *true*.
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar>OptionalChain : `?.` IdentifierName</emu-grammar>
+  <emu-alg>
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar>OptionalChain : OptionalChain `.` IdentifierName</emu-grammar>
+  <emu-alg>
+    1. If |OptionalChain| Contains _symbol_ is *true*, return *true*.
+    1. Return *false*.
+  </emu-alg>
+</emu-clause>

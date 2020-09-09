@@ -1,0 +1,29 @@
+<emu-clause id="sec-static-semantics-static-semantics-isdestructuring">
+  <h1>Static Semantics: IsDestructuring</h1>
+  <emu-see-also-para op="IsDestructuring"></emu-see-also-para>
+  <emu-grammar>MemberExpression : PrimaryExpression</emu-grammar>
+  <emu-alg>
+    1. If |PrimaryExpression| is either an |ObjectLiteral| or an |ArrayLiteral|, return *true*.
+    1. Return *false*.
+  </emu-alg>
+  <emu-grammar>
+    MemberExpression :
+      MemberExpression `[` Expression `]`
+      MemberExpression `.` IdentifierName
+      MemberExpression TemplateLiteral
+      SuperProperty
+      <ins>ClassProperty</ins>
+      MetaProperty
+      `new` MemberExpression Arguments
+
+    NewExpression :
+      `new` NewExpression
+
+    LeftHandSideExpression :
+      CallExpression
+      OptionalExpression
+  </emu-grammar>
+  <emu-alg>
+    1. Return *false*.
+  </emu-alg>
+</emu-clause>

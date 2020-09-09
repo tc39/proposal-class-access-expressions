@@ -1,0 +1,18 @@
+<emu-clause oldids="sec-static-semantics-static-semantics-isvalidsimpleassignmenttarget" id="sec-static-semantics-static-semantics-assignmenttargettype">
+  <h1>Static Semantics: AssignmentTargetType</h1>
+  <emu-see-also-para op="AssignmentTargetType"></emu-see-also-para>
+  <emu-grammar>
+    CallExpression :
+      CallExpression `[` Expression `]`
+      CallExpression `.` IdentifierName
+
+    MemberExpression :
+      MemberExpression `[` Expression `]`
+      MemberExpression `.` IdentifierName
+      SuperProperty
+      <ins>ClassProperty</ins>
+  </emu-grammar>
+  <emu-alg>
+    1. Return ~simple~.
+  </emu-alg>
+</emu-clause>

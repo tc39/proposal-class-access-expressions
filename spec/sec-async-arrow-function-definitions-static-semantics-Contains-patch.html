@@ -1,0 +1,21 @@
+<emu-clause id="sec-async-arrow-function-definitions-static-semantics-Contains">
+  <h1>Static Semantics: Contains</h1>
+  <p>With parameter _symbol_.</p>
+  <emu-grammar>
+    AsyncArrowFunction : `async` AsyncArrowBindingIdentifier `=>` AsyncConciseBody
+  </emu-grammar>
+  <emu-alg>
+    1. If _symbol_ is not one of |NewTarget|, |SuperProperty|, |SuperCall|<ins>, |ClassProperty|</ins>, `super`<ins>, `class`</ins>, or `this`, return *false*.
+    1. Return |AsyncConciseBody| Contains _symbol_.
+  </emu-alg>
+  <emu-grammar>
+    AsyncArrowFunction : CoverCallExpressionAndAsyncArrowHead `=>` AsyncConciseBody
+  </emu-grammar>
+  <emu-alg>
+    1. If _symbol_ is not one of |NewTarget|, |SuperProperty|, |SuperCall|<ins>, |ClassProperty|</ins>, `super`<ins>, `class`</ins>, or `this`, return *false*.
+    1. Let _head_ be CoveredAsyncArrowHead of |CoverCallExpressionAndAsyncArrowHead|.
+    1. If _head_ Contains _symbol_ is *true*, return *true*.
+    1. Return |AsyncConciseBody| Contains _symbol_.
+  </emu-alg>
+  <emu-note>Normally, Contains does not look inside most function forms. However, Contains is used to detect `new.target`, `this`, <del>and `super`</del><ins>, `super`, and `class`-property</ins> usage within an AsyncArrowFunction.</emu-note>
+</emu-clause>

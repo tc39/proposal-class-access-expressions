@@ -1,0 +1,33 @@
+<emu-clause id="sec-scripts-static-semantics-early-errors">
+  <h1>Static Semantics: Early Errors</h1>
+  <emu-grammar>Script : ScriptBody</emu-grammar>
+  <ul>
+    <li>
+      It is a Syntax Error if the LexicallyDeclaredNames of |ScriptBody| contains any duplicate entries.
+    </li>
+    <li>
+      It is a Syntax Error if any element of the LexicallyDeclaredNames of |ScriptBody| also occurs in the VarDeclaredNames of |ScriptBody|.
+    </li>
+  </ul>
+  <emu-grammar>ScriptBody : StatementList</emu-grammar>
+  <ul>
+    <li>
+      It is a Syntax Error if |StatementList| Contains `super` unless the source code containing `super` is eval code that is being processed by a direct eval. Additional early error rules for `super` within direct eval are defined in <emu-xref href="#sec-performeval"></emu-xref>.
+    </li>
+    <li>
+      <ins>It is a Syntax Error if |StatementList| Contains |ClassProperty| unless the source code containing |ClassProperty| is eval code that is being processed by a direct eval. Additional early error rules for |ClassProperty| within direct eval are defined in <emu-xref href="#sec-performeval"></emu-xref>.</ins>
+    </li>
+    <li>
+      It is a Syntax Error if |StatementList| Contains |NewTarget| unless the source code containing |NewTarget| is eval code that is being processed by a direct eval. Additional early error rules for |NewTarget| in direct eval are defined in <emu-xref href="#sec-performeval"></emu-xref>.
+    </li>
+    <li>
+      It is a Syntax Error if ContainsDuplicateLabels of |StatementList| with argument &laquo; &raquo; is *true*.
+    </li>
+    <li>
+      It is a Syntax Error if ContainsUndefinedBreakTarget of |StatementList| with argument &laquo; &raquo; is *true*.
+    </li>
+    <li>
+      It is a Syntax Error if ContainsUndefinedContinueTarget of |StatementList| with arguments &laquo; &raquo; and &laquo; &raquo; is *true*.
+    </li>
+  </ul>
+</emu-clause>

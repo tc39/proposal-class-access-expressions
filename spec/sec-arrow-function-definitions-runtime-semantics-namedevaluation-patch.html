@@ -1,0 +1,16 @@
+<emu-clause id="sec-arrow-function-definitions-runtime-semantics-namedevaluation">
+  <h1>Runtime Semantics: NamedEvaluation</h1>
+  <p>With parameter _name_.</p>
+  <emu-grammar>ArrowFunction : ArrowParameters `=&gt;` ConciseBody</emu-grammar>
+  <emu-alg>
+    1. Let _scope_ be the LexicalEnvironment of the running execution context.
+    1. Let _sourceText_ be the source text matched by |ArrowFunction|.
+    1. Let _parameters_ be CoveredFormalsList of |ArrowParameters|.
+    1. [id="step-arrowfunction-evaluation-functioncreate"] Let _closure_ be OrdinaryFunctionCreate(%Function.prototype%, _sourceText_, _parameters_, |ConciseBody|, ~lexical-this~, _scope_).
+    1. Perform SetFunctionName(_closure_, _name_).
+    1. Return _closure_.
+  </emu-alg>
+  <emu-note>
+    <p>An |ArrowFunction| does not define local bindings for `arguments`, `super`<ins>, `class`</ins>, `this`, or `new.target`. Any reference to `arguments`, `super`<ins>, `class`</ins>, `this`, or `new.target` within an |ArrowFunction| must resolve to a binding in a lexically enclosing environment. Typically this will be the Function Environment of an immediately enclosing function. Even though an |ArrowFunction| may contain references to `super`, the function object created in step <emu-xref href="#step-arrowfunction-evaluation-functioncreate"></emu-xref> is not made into a method by performing MakeMethod. An |ArrowFunction| that references `super`<ins> or `class`</ins> is always contained within a non-|ArrowFunction| and the necessary state to implement `super`<ins> or `class`</ins> is accessible via the _scope_ that is captured by the function object of the |ArrowFunction|.</p>
+  </emu-note>
+</emu-clause>

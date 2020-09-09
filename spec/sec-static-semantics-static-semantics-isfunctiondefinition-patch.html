@@ -1,0 +1,24 @@
+<emu-clause id="sec-static-semantics-static-semantics-isfunctiondefinition">
+  <h1>Static Semantics: IsFunctionDefinition</h1>
+  <emu-see-also-para op="IsFunctionDefinition"></emu-see-also-para>
+  <emu-grammar>
+    MemberExpression :
+      MemberExpression `[` Expression `]`
+      MemberExpression `.` IdentifierName
+      MemberExpression TemplateLiteral
+      SuperProperty
+      <ins>ClassProperty</ins>
+      MetaProperty
+      `new` MemberExpression Arguments
+
+    NewExpression :
+      `new` NewExpression
+
+    LeftHandSideExpression :
+      CallExpression
+      OptionalExpression
+  </emu-grammar>
+  <emu-alg>
+    1. Return *false*.
+  </emu-alg>
+</emu-clause>

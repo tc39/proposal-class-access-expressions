@@ -1,0 +1,14 @@
+<emu-clause id="sec-arrow-function-definitions-static-semantics-contains">
+  <h1>Static Semantics: Contains</h1>
+  <p>With parameter _symbol_.</p>
+  <emu-see-also-para op="Contains"></emu-see-also-para>
+  <emu-grammar>ArrowFunction : ArrowParameters `=&gt;` ConciseBody</emu-grammar>
+  <emu-alg>
+    1. If _symbol_ is not one of |NewTarget|, |SuperProperty|, |SuperCall|<ins>, |ClassProperty|</ins>, `super`<ins>, `class`</ins> or `this`, return *false*.
+    1. If |ArrowParameters| Contains _symbol_ is *true*, return *true*.
+    1. Return |ConciseBody| Contains _symbol_.
+  </emu-alg>
+  <emu-note>
+    <p>Normally, Contains does not look inside most function forms. However, Contains is used to detect `new.target`, `this`, <del>and `super`</del><ins>, `super` and `class`-property</ins> usage within an |ArrowFunction|.</p>
+  </emu-note>
+</emu-clause>
