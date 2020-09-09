@@ -428,7 +428,7 @@ class Base {
   }
   ...
   static doIncrement() {
-    class.#increment(this);
+    class.#increment.call(this);
   }
 }
 ```
